@@ -6,7 +6,7 @@ function Card({image, title, description, link, skill}) {
             <div className='container'>
                 <a href={`/${link}`}>
                     <div>
-                        <img className="max-w-24 max-h-32" src={image} alt={title}></img>
+                        <img className="max-w-64 max-h-48" src={`/${image}`} alt={title}></img>
                     </div>
                     <div>{title}</div>
                 </a>

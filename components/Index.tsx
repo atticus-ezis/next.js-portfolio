@@ -4,7 +4,7 @@ export const Index = () => {
   return (
     <div className=''>
         <div className=''>
-            <h1 className='text-5xl'>Index Section</h1>
+            <h1 className='text-5xl'>Site Index</h1>
             <br />
             <ul>
                 <li><a href="#about">About</a></li>
