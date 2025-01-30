@@ -1,8 +1,11 @@
+
+
+
 const { Configuration, OpenAIApi } = require("openai");
 
 // Initialize the API client with your API key
 const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY
+    apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY
 });
 const openai = new OpenAIApi(configuration);
 
@@ -10,8 +13,8 @@ async function getProfessionalAnswer(question) {
     try {
         // Provide your resume or other professional documents as context
         const documents = [
-            "Experience: Software Developer at XYZ Corp, 2020-Present. Skills: JavaScript, Python, AWS.",
-            "Education: Bachelor's in Computer Science from ABC University, 2016-2020."
+            "I'm Atticus Ezis. A self taught software developer profecient in languages and frameworks such as: [html, css, javascript, Python, Django, Next.js, React, bootstrap, tailwind]",
+            "My past work experiences includes customer service roles as: [server, garden-sales assocaite at McGuckins, vendor for Lifted Limited, CSA organizer]. And technical roles like printer operator at Lifted Limited LLC and Junior Developer at American Literature",
         ];
 
         // Construct the prompt with the question and context

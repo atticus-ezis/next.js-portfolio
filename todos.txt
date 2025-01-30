@@ -1,1 +1,2 @@
-1 create component for current hero page
+connect lamma api and test
+create a ui 
