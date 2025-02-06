@@ -9,12 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "dotenv": "^16.4.7",
     "next": "15.1.6",
-    "openai": "^4.81.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "openai": "4.82.0"
   },
+  "type": "module",
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
