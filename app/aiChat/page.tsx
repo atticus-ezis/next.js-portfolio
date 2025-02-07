@@ -10,15 +10,15 @@ export default function Chat() {
   const sendMessage = async () => {
     if (!message) return;
     setLoading(true);
-    setResponse("");
+    setResponse(""); // reset response 
     try {
-      const res = await fetch("/aiChat/api/hello", {
+      const res = await fetch("/aiChat/api/hello", { // pass message to chat api 
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({ message }),
       });
       const data = await res.json();
-      setResponse(data.choices?.[0]?.message?.content || "No response recieved");
+      setResponse(data.choices?.[0]?.message?.content || "No response recieved - not enough tokens available");
     } catch (error) {
       setResponse("error connecting to api");
     } finally {
