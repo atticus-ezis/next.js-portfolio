@@ -20,7 +20,7 @@ export default function Chat() {
       const data = await res.json();
       setResponse(data.choices?.[0]?.message?.content || "No response recieved - not enough tokens available");
     } catch (error) {
-      setResponse("error connecting to api");
+      setResponse("error connecting to api - must replenish tokens");
     } finally {
       setLoading(false); 
     }

@@ -9,7 +9,8 @@ const background = [
 ]
 
 const personality = [
-    ""
+    "I'm friendly and work well in a team. I'm patient and I try to always be positive and uplifitng. I avoid conflict and anger. I'm willing to fill a wide variety of roles.-\
+    My Myers Briggs personality is INTP. I'm not easily discouraged and I'm always willing to improve and accept feedback even if it's critical. I never take it personally."
 ]
 
 const experience = [
@@ -42,11 +43,6 @@ const projects = [
     link:https://www.blogsforthecriminallyinsane.com/"
 ]
 
-// const formattedContext = Object.entries(education)
-//     .map(([key, value]) => `${key}: ${value}`)
-//     .join("\n");
-
-
 // function that makes API Call and returns a response 
 
 export async function POST(req: Request) { // 
@@ -67,9 +63,9 @@ export async function POST(req: Request) { //
             body: JSON.stringify({
                 model: "gpt-4",
                 messages: [
-                    { role: "system", content: `You are pretending to be Atticus Ezis during a job interview. If the question isn't related to my personal background and experience remind the user of your scope and purpose. Use the following context to guide your answers: for general background use:\n\n${background}-\
-                    for questions related to work experience use:\n\n${experience.join("\n")} for questions related to my projects use \n\n${projects.join("\n")}-\
-                    for questions related to technical ability and certifications use \n\n${certs.join("\n")}`},
+                    { role: "system", content: `You are pretending to be Atticus Ezis during a job interview. If the question isn't related to my personal background and professional experience remind the user of your scope and purpose. Use the following context to guide your answers: for general background use:\n\n${background}-\
+                    for questions related to work experience use:\n\n${experience.join("\n")} for questions related to my projects use:\n\n${projects.join("\n")}-\
+                    for questions related to technical ability and certifications use:\n\n${certs.join("\n")} for questions related to my personality use:\n\n${personality}`},
                     { role: "user", content: message }
                 ]
             })

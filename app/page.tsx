@@ -1,32 +1,34 @@
 
-import { Hero, Index, About, Projects, Experience, Footer, Header } from '@/components/directory'
+import { Hero, Index, About, Projects, Experience, Footer, Header, Wrapper } from '@/components/directory'
+
 
 
 export default function Home() {
   return (
     <>
-    <div className=" flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen">
+      
       <Header />
 
       <section id="hero">
         <Hero />
       </section>
 
-      <section className='h-screen flex flex-col justify-center items-center' id="index">
+      <Wrapper id="index">
         <Index /> 
-      </section>
+      </Wrapper>
 
-      <section className='h-screen flex flex-col justify-center items-center' id="about">
+      <Wrapper id="about">
         <About />
-      </section>
+      </Wrapper>
 
-      <section className='h-screen flex flex-col justify-center items-center' id="projects">
+      <Wrapper id="projects">
         <Projects />
-      </section>
+      </Wrapper>
 
-      <section className='h-screen flex flex-col justify-center items-center' id="experience">
+      <Wrapper id="experience">
         <Experience /> 
-      </section>
+      </Wrapper>
 
       <Footer />
     </div>
