@@ -11,17 +11,18 @@ export const Experience = () => {
                 <li>Interacted with the database via Django shell and Admin Console to gather new information such as rating, image and preface</li>
                 <li>Created backend functions in Python and Front end functions in JavaScript to process and render the data.</li>
             </ul>
-            <ul>Printer Operator 
-                <h1>Lifted Limited</h1>
-                <li>Used Mimaki's software and Adobe Creative suite to create, render, and style, product designs</li>
-                <li>Halfed order fulfilment time</li>
+            <ul>
+                        <h1>Certifications:</h1>
+                        <li><a href="https://www.freecodecamp.org/certification/AtticusE/responsive-web-design" target="_blank" >
+                        Responsive-Web-Design</a></li>
+                        <li><a href="https://www.freecodecamp.org/certification/AtticusE/javascript-algorithms-and-data-structures-v8" target="_blank">
+                        Java Script Algorithms and Data Structures</a></li>
+                        <li><a href="https://www.coursera.org/account/accomplishments/verify/NGJN6NRVQEQM" target="_blank">
+                        Databases and SQL for Python</a></li>
+                        <li><a href="https://www.coursera.org/account/accomplishments/verify/YWT8CXMSAEBS" target="_blank">
+                        Python for Data Science, AI & Development</a></li>
             </ul>
-            <ul>Assembler
-                <h1>Colorado Teardrops</h1>
-                <li>Cross-collabortation with project workflows.</li>
-                <li>Trained new employees, & participated in QA.</li>
-                <li>Doubled weekly output</li>
-            </ul>
+         
         </div>
     </>
   )
