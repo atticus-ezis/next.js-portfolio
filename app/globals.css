@@ -19,3 +19,7 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+textarea {
+  border-color: none; /* Allows Tailwind classes to take effect */
+}
