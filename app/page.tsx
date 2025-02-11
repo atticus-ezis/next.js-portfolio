@@ -1,4 +1,4 @@
-import { Hero, Index, About, Projects, Experience, Footer, Header, Wrapper } from '@/components/directory';
+import { Hero, About, Projects, Experience, Footer, Header, Wrapper } from '@/components/directory';
 
 export default function Home() {
   return (
@@ -7,10 +7,6 @@ export default function Home() {
 
       <Wrapper id="hero">
         <Hero />
-      </Wrapper>
-
-      <Wrapper id="index">
-        <Index />
       </Wrapper>
 
       <Wrapper id="about">
