@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 interface SectionWrapperProps {
   id: string;
@@ -7,8 +7,8 @@ interface SectionWrapperProps {
 
 export const Wrapper = ({ id, children }: SectionWrapperProps) => {
   return (
-    <section className="h-screen flex flex-col justify-center items-center" id={id}>
+    <section className="h-screen flex flex-col justify-center items-center px-[3rem]" id={id}>
       {children}
     </section>
-  )
-}
+  );
+};
