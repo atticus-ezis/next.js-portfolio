@@ -5,7 +5,7 @@ export const About = () => {
     <div className="mt-[12rem] grid grid-cols-2 gap-[2rem]">
       <div className="">
         <div className="animated fadeInLeft">
-          <h2>About me</h2>
+          <p className="font-bold text-2xl">About me</p>
         </div>
 
         <div>
@@ -66,7 +66,7 @@ export const About = () => {
         </div>
       </div>
       <div className="flex justify-center p-8">
-        <img className="rounded-full object-cover" src="/profile.JPG"></img>
+        <img className="rounded-full object-cover" src="/profile.png"></img>
       </div>
     </div>
   );
