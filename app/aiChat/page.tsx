@@ -1,6 +1,6 @@
-"use client" 
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 export default function Chat() {
   const [message, setMessage] = useState("");
@@ -10,11 +10,12 @@ export default function Chat() {
   const sendMessage = async () => {
     if (!message) return;
     setLoading(true);
-    setResponse(""); // reset response 
+    setResponse(""); // reset response
     try {
-      const res = await fetch("/aiChat/api/hello", { // pass message to chat api 
+      const res = await fetch("/aiChat/api/hello", {
+        // pass message to chat api
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message }),
       });
       const data = await res.json();
@@ -22,32 +23,32 @@ export default function Chat() {
     } catch (error) {
       setResponse("error connecting to api - must replenish tokens");
     } finally {
-      setLoading(false); 
+      setLoading(false);
     }
   };
-  
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
       <h1 className="text-2xl font-bold mb-4">Chat with AI</h1>
       <textarea
-          className="w-full max-w-lg p-2 border rounded text-black"
-          rows={3}
-          placeholder="Type your message..."
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+        className="w-full max-w-lg p-2 border rounded text-black"
+        rows={3}
+        placeholder="Type your message..."
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
       />
       <button
-          className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          onClick={sendMessage}
-          disabled={loading}
+        className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+        onClick={sendMessage}
+        disabled={loading}
       >
-          {loading ? "Sending..." : "Send"}
+        {loading ? "Sending..." : "Send"}
       </button>
       {response && (
-          <div className="mt-4 p-3 border rounded bg-gray-100 w-full max-w-lg text-black">
-              <strong>AI Response:</strong>
-              <p>{response}</p>
-          </div>
+        <div className="mt-4 p-3 border rounded bg-gray-100 w-full max-w-lg text-black">
+          <strong>AI Response:</strong>
+          <p>{response}</p>
+        </div>
       )}
     </div>
   );
