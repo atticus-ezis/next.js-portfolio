@@ -1,4 +1,4 @@
-import { Hero, About, Projects, Experience, Footer, Header, Wrapper } from '@/components/directory';
+import { AiChat, About, Projects, Experience, Footer, Header, Wrapper } from '@/components/directory';
 
 export default function Home() {
   return (
@@ -6,7 +6,7 @@ export default function Home() {
       <Header />
 
       <Wrapper id="hero">
-        <Hero />
+        <AiChat />
       </Wrapper>
 
       <Wrapper id="about">

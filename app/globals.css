@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.center {
+  @apply flex flex-col justify-center items-center;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -21,5 +25,6 @@ body {
 }
 
 textarea {
-  border-color: none; /* Allows Tailwind classes to take effect */
+  border: none;
+  outline: none;
 }

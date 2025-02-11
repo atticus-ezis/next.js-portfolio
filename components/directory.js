@@ -5,3 +5,4 @@ export { Projects } from './Projects';
 export { Footer } from './Footer';
 export { Header } from './Header';
 export { Wrapper } from './Wrapper';
+export { AiChat } from './AiChat';
