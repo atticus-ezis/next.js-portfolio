@@ -6,6 +6,7 @@ export default function Home() {
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
+  const [history, setHistory] = useState<{ question: string; answer: string }[]>([]);
 
   const sendMessage = async () => {
     if (!message) return;
@@ -17,7 +18,10 @@ export default function Home() {
         body: JSON.stringify({ message }),
       });
       const data = await res.json();
-      setResponse(data.choices?.[0]?.message?.content || 'Tokens for AI client have been exhausted at this time.');
+      const aiResponse =
+        data.choices?.[0]?.message?.content || 'Tokens for AI client have been exhausted at this time.';
+      setHistory((prevHistory) => [...prevHistory, { question: message, answer: aiResponse }]);
+      setResponse(aiResponse);
     } catch (error) {
       console.log(error);
     } finally {
@@ -28,23 +32,29 @@ export default function Home() {
 
   return (
     <div id="main-block" className="container h-screen w-3/4 mx-auto center">
-      {/* top half - response */}
-      <div id="response-block" className="w-full flex-1 flex flex-col-reverse items-center overflow-y-auto">
-        {/* remeber order is REVERSED! */}
-        {!response ? (
+      {/* reponse - top half */}
+      <div id="response-block" className="w-full flex-1 flex flex-col">
+        {!response && history.length === 0 ? (
           <>
-            <div id="loading" className="min-h-[30px] self-start">
-              {loading ? 'Thinking...' : ''}
-            </div>
-            <div className="text-5xl text-center">Nice to Meet you</div>
+            <div className="text-5xl text-center">{!loading ? 'Nice to Meet you' : 'Thinking...'}</div>
           </>
         ) : (
           <>
-            <div id="response" className="self-start p-2 bg-green-700 rounded-lg">
-              {response}
+            <div id="chat-history" className="w-full flex-1 flex flex-col overflow-y-auto">
+              {history.map((entry, index) => (
+                <div key={index}>
+                  <div id="message" className="self-end p-2 bg-blue-500 rounded-lg">
+                    {entry.question}
+                  </div>
+                  <div id="response" className="self-start p-2 bg-green-700 rounded-lg">
+                    {entry.answer}
+                  </div>
+                </div>
+              ))}
             </div>
-            <div id="message" className="self-end p-2 bg-blue-500 rounded-lg">
-              {message}
+
+            <div id="loading" className="min-h-[30px] self-start">
+              {loading ? 'Thinking...' : ''}
             </div>
           </>
         )}
