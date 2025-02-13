@@ -1,51 +1,66 @@
-import React from "react";
+(' use client ');
+
+import React from 'react';
+
+interface Certification {
+  id: number;
+  title: string;
+  link: string;
+  description: string;
+}
+
+const certifications: Certification[] = [
+  {
+    id: 0,
+    title: 'Responsive-Web-Design',
+    link: 'https://www.freecodecamp.org/certification/AtticusE/responsive-web-design',
+    description: 'Responsive',
+  },
+  {
+    id: 1,
+    title: 'Java Script Algorithms and Data Structures',
+    link: 'https://www.freecodecamp.org/certification/AtticusE/javascript-algorithms-and-data-structures-v8',
+    description:
+      'Demonstrates proficiency in JavaScript by mastering fundamental algorithms, data structures, and problem-solving techniques. Covers recursion, sorting algorithms, object-oriented programming, functional programming, and performance optimization. Ideal for building efficient and scalable applications.',
+  },
+  {
+    id: 2,
+    title: 'Databases and SQL for Python',
+    link: 'https://www.coursera.org/account/accomplishments/verify/NGJN6NRVQEQM',
+    description: 'Responsive',
+  },
+  {
+    id: 3,
+    title: 'Python for Data Science, AI & Development',
+    link: 'https://www.coursera.org/account/accomplishments/verify/YWT8CXMSAEBS',
+    description: 'Responsive',
+  },
+];
+
+const Card: React.FC<{ project: Certification }> = ({ cert }) => {
+  return (
+    <div className="min-h-80 w-80 relative bg-white p-4 rounded-3xl shadow-lg overflow-hidden">
+      <a href={cert.link}>
+        <div className="flex flex-col justify-between mt-4">
+          <h3 className="text-xl font-semibold text-gray-700">{cert.title}</h3>
+          <p className="py-2 text-gray-500 text-sm">{cert.description}</p>
+        </div>
+      </a>
+    </div>
+  );
+};
 
 export const Experience = () => {
   return (
-    <>
-      <div>Experience</div>
-      <div>
-        <ul>
-          Junior Developer
-          <a href="https://americanliterature.com">
-            <h1>American Literature.com</h1>
-          </a>
-          <li>Used Django to restyle the library for a better UX </li>
-          <li>
-            Interacted with the database via Django shell and Admin Console to gather new information such as rating,
-            image and preface
-          </li>
-          <li>
-            Created backend functions in Python and Front end functions in JavaScript to process and render the data.
-          </li>
-        </ul>
-        <ul>
-          <h1>Certifications:</h1>
-          <li>
-            <a href="https://www.freecodecamp.org/certification/AtticusE/responsive-web-design" target="_blank">
-              Responsive-Web-Design
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.freecodecamp.org/certification/AtticusE/javascript-algorithms-and-data-structures-v8"
-              target="_blank"
-            >
-              Java Script Algorithms and Data Structures
-            </a>
-          </li>
-          <li>
-            <a href="https://www.coursera.org/account/accomplishments/verify/NGJN6NRVQEQM" target="_blank">
-              Databases and SQL for Python
-            </a>
-          </li>
-          <li>
-            <a href="https://www.coursera.org/account/accomplishments/verify/YWT8CXMSAEBS" target="_blank">
-              Python for Data Science, AI & Development
-            </a>
-          </li>
-        </ul>
+    <div className="py-12 px-[3rem] mt-[12rem] mb-[12rem] ">
+      <div className="flex justify-between items-center mb-6 flex-col">
+        <h2 className="text-3xl font-bold flex-col">Certifications</h2>
       </div>
-    </>
+      <div className="flex flex-wrap justify-center gap-6  items-center ">
+        {certifications.map((cert) => (
+          <Card key={cert.id} cert={cert} />
+        ))}
+      </div>
+    </div>
   );
 };
