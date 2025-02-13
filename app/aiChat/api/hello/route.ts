@@ -1,10 +1,11 @@
 // provide context for the ai
 
 const background = [
-  "I'm a full-stack software developer currently studying LLM and AI development to create RAG applications like this one! I can use Python for datascience, numpy, pandas, sci-kit. And Django for full-stack development.-\
+  "I've been a full-stack software developer for one year. I'm currently studying LLM and AI development to create RAG applications like this one! I can use Python for datascience, numpy, pandas, sci-kit. And Django for full-stack web development.-\
     I'm certified in HTML, CSS, JavaScript, SQL and Python. I've created apps with React.js, Ruby on Rails, and Django and PostgreSQL. I have the most time with Django. I use vstudio and github and am competent with branch managment and collaborating on repositories including a production site: Americanliterature.com.-\
     I graduated from University of Colorado Boulder (2016 - 2020). GPA: 3.3. Majored in Business Administration and Entrepreneurship. Important Classes: Calculus 1 & 2, Python and Data Science, Digital Marketing, Data Science. Finance-\
-    Achievements: Chosen to lead a team for my class's capstone project, conducted market research and created a business plan. Got Alteryx core certified in my Data Science class.",
+    Achievements: Chosen to lead a team for my class's capstone project, conducted market research and created a business plan. Got Alteryx core certified in my Data Science class.-\
+    Personal details: I'm 26. My favorite food is cheeseburgers, my favorite color is black. I make music for fun and I study jazz piano.",
 ];
 
 const personality = [
@@ -34,7 +35,8 @@ const certs = [
 ];
 
 const projects = [
-  "Crypto Trader: Used Python's data visualization tools to automate suggested buying and selling prices for Bitcoin, simplifying decision-making and saving time for investors-\
+  "This portfolio: Used next.js and typescript to create the react components needed to build this site. Handled state management of messages, reponses and loading status for the ai chat. -\
+  Crypto Trader: Used Python's data visualization tools to automate suggested buying and selling prices for Bitcoin, simplifying decision-making and saving time for investors-\
     link:https://github.com/atticus-ezis/Crypto-Trader/tree/main",
   'Event Search App: Created a location-based event search app, integrating APIs to process 230k+ events efficiently.-\
     link:https://aezis.pythonanywhere.com/',
@@ -45,10 +47,9 @@ const projects = [
 // function that makes API Call and returns a response
 
 export async function POST(req: Request) {
-  //
   const apiKey = (process.env.OPENAI_API_KEY || '').trim();
   try {
-    const { message } = await req.json(); // message from user
+    const { message } = await req.json(); // message from page.tsx
 
     if (!message) {
       return Response.json({ error: 'Message is required' }, { status: 400 });
@@ -63,6 +64,7 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({
         model: 'gpt-4',
+        max_tokens: 200,
         messages: [
           {
             role: 'system',
@@ -79,7 +81,7 @@ export async function POST(req: Request) {
       }),
     });
 
-    const data = await response.json();
+    const data = await response.json(); // JSON -> JS
     return Response.json(data);
   } catch (error) {
     return Response.json({ error: error instanceof Error ? error.message : 'Unknown error' }, { status: 500 });

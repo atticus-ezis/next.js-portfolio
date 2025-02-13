@@ -26,12 +26,13 @@ export const AiChat = () => {
     }
   };
   return (
-    <div className="w-[50%]">
-      <div className="container min-h-5">
+    <div className="container">
+      <div className="h-[%50]">
         {!response && (
           <div>
-            <div className="center text-4xl">Welcome, I'm Atticus</div>
-            <div className="center text-lg">Message my personal AI...</div>
+            <div className="center text-5xl">Nice to meet you</div>
+            <div className="center text-3xl"></div>
+            <div className="center text-lg">Have any questions?</div>
           </div>
         )}
         {response && <div>{response}</div>}
@@ -43,7 +44,7 @@ export const AiChat = () => {
 
       <textarea
         className="w-full bg-[#21212150] text-white rounded-lg p-4"
-        placeholder="Ask about my background!"
+        placeholder="Message my personalised AI"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         onKeyDown={(e) => {
