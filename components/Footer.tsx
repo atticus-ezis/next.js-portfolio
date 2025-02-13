@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 export const Footer = () => {
   return (
@@ -10,13 +10,7 @@ export const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image
-          aria-hidden
-          src="/github.svg"
-          alt="File icon"
-          width={16}
-          height={16}
-        />
+        <Image aria-hidden src="/github.svg" alt="File icon" width={16} height={16} />
         GitHub
       </a>
       <a
@@ -25,13 +19,7 @@ export const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image
-          aria-hidden
-          src="/linkedin.png"
-          alt="Window icon"
-          width={16}
-          height={16}
-        />
+        <Image aria-hidden src="/linkedin.png" alt="Window icon" width={16} height={16} />
         Linkedin
       </a>
       <a
@@ -40,13 +28,7 @@ export const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image
-          aria-hidden
-          src="/gmail.svg"
-          alt="Globe icon"
-          width={16}
-          height={16}
-        />
+        <Image aria-hidden src="/gmail.svg" alt="Globe icon" width={16} height={16} />
         Email
       </a>
     </footer>

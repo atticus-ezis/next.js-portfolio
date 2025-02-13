@@ -33,7 +33,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full p-4 flex gap-6 justify-center mr-0 z-11">
+    <header className="fixed top-0 w-full p-4 flex gap-6 justify-center mr-0 z-10">
       <nav className="bg-[#21212150] backdrop-blur-[6px] justify-center fixed top-0 w-full  shadow-md p-4 flex gap-4">
         <NavLink section="hero" />
         <NavLink section="about" />
