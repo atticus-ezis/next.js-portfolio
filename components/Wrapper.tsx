@@ -7,7 +7,7 @@ interface SectionWrapperProps {
 
 export const Wrapper = ({ id, children }: SectionWrapperProps) => {
   return (
-    <section className="h-screen flex flex-col justify-center items-center px-[3rem]" id={id}>
+    <section className="center h-screen px-[3rem]" id={id}>
       {children}
     </section>
   );

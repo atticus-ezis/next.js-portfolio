@@ -16,7 +16,7 @@ const testConvo = [
   { question: 'What about ketchup?', answer: 'Yea they come in packets' },
 ];
 
-export const AiChat = () => {
+export default function Home() {
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
@@ -59,7 +59,7 @@ export const AiChat = () => {
         </div>
       ) : (
         <div id="response-block" className="w-full h-[75%] flex flex-col justify-end">
-          <div id="chat-history" className="w-full flex flex-col-reverse overflow-y-auto">
+          <div id="chat-history" className="w-full flex flex-col-reverse overflow-y-auto mt-20">
             {history.map((entry, index) => (
               <div key={index} className="flex flex-col">
                 <div id="message" className="self-end max-w-80 p-2 bg-blue-500 rounded-lg m-2">
@@ -95,4 +95,4 @@ export const AiChat = () => {
       </div>
     </div>
   );
-};
+}
