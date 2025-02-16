@@ -1,20 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-const testConvo = [
-  { question: 'Hello?', answer: 'Hello how can I help you?' },
-  { question: 'Looking for a burger', answer: 'have you tried McDonalds?' },
-  {
-    question: "Do they have fires? I'd really like to have some fries",
-    answer: 'of course man they have fries for sure',
-  },
-  { question: 'What about ketchup?', answer: 'Yea they come in packets' },
-  {
-    question: "Nah I don't like the way the packets taste sorry but I'll have to pass",
-    answer: "Ok that's reasonable",
-  },
-  { question: 'What about ketchup?', answer: 'Yea they come in packets' },
-];
 
 export const AiChat = () => {
   const [message, setMessage] = useState('');
