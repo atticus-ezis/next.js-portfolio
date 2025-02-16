@@ -35,16 +35,16 @@ export const Header = () => {
   return (
     <header className="fixed top-0 w-full p-4 flex gap-6 justify-center mr-0 z-10">
       <nav className="bg-[#21212150] backdrop-blur-[6px] justify-center fixed top-0 w-full  shadow-md p-4 flex gap-4">
-        <NavLink section="hero" />
-        <NavLink section="about" />
-        <NavLink section="projects" />
-        <NavLink section="experience" />
+        <NavLink section="ai" name="ai" />
+        <NavLink section="about" name="about" />
+        <NavLink section="projects" name="projects" />
+        <NavLink section="experience" name="experience" />
       </nav>
     </header>
   );
 };
 
-const NavLink = ({ section }: { section: string }) => {
+const NavLink = ({ section, name }: { section: string; name: string }) => {
   return (
     <Link
       href={`#${section}`}
@@ -55,7 +55,7 @@ const NavLink = ({ section }: { section: string }) => {
       }}
       className="cursor-pointer hover:underline hover:underline-offset-4 text-white hover:text-gray-500"
     >
-      {section.toUpperCase()}
+      {name.toUpperCase()}
     </Link>
   );
 };

@@ -9,7 +9,7 @@ export default function Home() {
         <Hero />
       </Wrapper>
 
-      <Wrapper id="aiChat">
+      <Wrapper id="ai">
         <AiChat />
       </Wrapper>
 
