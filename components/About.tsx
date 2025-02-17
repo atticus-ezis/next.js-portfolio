@@ -2,12 +2,12 @@ import React from 'react';
 
 export const About = () => {
   return (
-    <div className="container mx-auto px-6 py-12 lg:px-16 bg-gray-100 rounded-lg shadow-lg">
-      <h1 className="text-5xl text-gray-700 font-bold text-center mb-8">About</h1>
+    <div className="container h-screen mx-auto px-6 py-12 lg:px-16 bg-gray-100 rounded-lg shadow-lg">
+      <h1 className="text-5xl text-gray-700 font-bold text-center mt-10">About</h1>
 
-      <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col md:flex-row gap-8 h-full w-full">
         {/* Left Content Section */}
-        <div className="w-full md:w-2/3 flex flex-col justify-between space-y-8">
+        <div className="w-full md:w-2/3 flex flex-col justify-between gap-4">
           {/* Web Design Section */}
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-semibold mb-2 text-gray-400">
