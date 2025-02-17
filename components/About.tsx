@@ -2,114 +2,76 @@ import React from 'react';
 
 export const About = () => {
   return (
-    <div className="container mx-auto p-8 h-[80%]">
-      <h1 className="text-5xl center">About</h1>
+    <div className="container mx-auto px-6 py-12 lg:px-16 bg-gray-100 rounded-lg shadow-lg">
+      <h1 className="text-5xl text-gray-700 font-bold text-center mb-8">About</h1>
 
-      <div className="flex flex-col md:flex-row">
-        <div className="w-full md:w-2/3 flex flex-col justify-between">
-          <div>
-            <h1>Web Design</h1>
-            <p>
-              I'm a full-stack web developer, who's worked with a wide range of frameworks, especially Django, which
-              I've used to contributed to the redesign of{' '}
-              <a href="https://americanliterature.com/">AmericanLiterature.com</a>, a popular platform that attracts
-              over 400,000 visitors each month.
+      <div className="flex flex-col md:flex-row gap-8">
+        {/* Left Content Section */}
+        <div className="w-full md:w-2/3 flex flex-col justify-between space-y-8">
+          {/* Web Design Section */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-2 text-gray-400">
+              <code>Web Design</code>
+            </h2>
+            <p className="text-gray-700">
+              I'm a full-stack web developer, specializing in frameworks like Django, contributing to the redesign of{' '}
+              <a href="https://americanliterature.com/" className="text-blue-500 hover:underline">
+                AmericanLiterature.com
+              </a>
+              , a platform with over 400,000 visitors per month. I'm also familiar with other Model-View-Controller
+              frameworks like Ruby and Next.js.
             </p>
-            <div className="bg-white rounded-md min-w-10 min-h-10 w-fit p-4">
-              <table className=""></table>
+
+            <div className="flex justify-start items-center flex-wrap gap-4 mt-4">
+              <img src="/django.svg" className="h-12" alt="Django" />
+              <img src="/postgre.svg" className="h-12" alt="PostgreSQL" />
+              <img src="/react.svg" className="h-12" alt="React" />
+              <img src="/bootstrap.svg" className="h-12" alt="Bootstrap" />
+              <img src="/tailwind.svg" className="h-12" alt="Tailwind CSS" />
+              <img src="/aws.svg" className="h-8" alt="AWS" />
             </div>
           </div>
-          <div>
-            <h1>Data Analytics</h1>
-            <p>
-              I've used linear regressions to predict crypto pricing with Python and increased my investment return by
-              24%
+
+          {/* Data Analytics Section */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-2  text-gray-400">
+              <code>Data Analytics</code>
+            </h2>
+            <p className="text-gray-700">
+              I've applied linear regressions and standard deviations in Python to predict crypto pricing, increasing my
+              investment return by 24%.
             </p>
+
+            <div className="flex justify-start items-center flex-wrap gap-4 mt-4">
+              <img src="/SQL.svg" className="h-12" alt="SQL" />
+              <img src="/python.jpeg" className="h-12" alt="Python" />
+              <img src="/NumPy.png" className="h-12" alt="NumPy" />
+              <img src="/pandas.png" className="h-12" alt="Pandas" />
+            </div>
           </div>
-          <div>
-            <h1>LMM Development</h1>
-            <p>
-              I can utilize Large Language Models and develop RAG applications to build custom AIs like the one on this
-              site.
+
+          {/* LMM Development Section */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-2  text-gray-400">LMM Development</h2>
+            <p className="text-gray-700">
+              I develop RAG applications using Large Language Models, including the AI on this site. Currently, I’m
+              studying TensorFlow to enhance my predictave ability.
             </p>
+            <div className="flex justify-start items-center flex-wrap gap-4 mt-4">
+              <img src="/tensor.png" className="h-12" alt="TensorFlow" />
+            </div>
           </div>
         </div>
 
-        <div className="w-full md:w-1/3 flex flex-col order-first md:order-none">
-          <h1>Column right</h1>
-          <div className="center">
-            <img className="w-64 h-64 md:w-96 md:h-96 rounded-full object-cover mt-5" src="/profile.JPG"></img>
-          </div>
+        {/* Right Profile Section */}
+        <div className="w-full order-first md:order-none md:w-1/3 flex flex-col items-center">
+          <img
+            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover mt-5 shadow-md"
+            src="/profile.JPG"
+            alt="Profile"
+          />
         </div>
       </div>
     </div>
   );
 };
-
-{
-  /* <div className="">
-        <div className="animated fadeInLeft">
-          <h2>About me</h2>
-        </div>
-
-        <div>
-          <div>
-            <p>
-              I'm a full-stack web developer, with a wide range of frameworks especially Django, which I've used to
-              contributed to the redesign of <a href="https://americanliterature.com/">amrican-literature</a>, a popular
-              platform that attracts over 400,000 visitors each month. I am skilled in building and deploying web
-              applications on AWS and am increasingly focusing on machine learning and data analytics by pursuing AWS
-              certifications. I excel in collaborative environments, consistently delivering solutions that address
-              complex problems and I'm currently seeking an entry-level role where I can grow my skillset.
-            </p>
-          </div>
-
-          <div>
-            <h1>Skills</h1>
-            <ul>
-              <h1>Front-end:</h1>
-              <li>React</li>
-              <li>Tailwind</li>
-              <li>Bootstrap</li>
-            </ul>
-            <ul>
-              <h1>Back-end:</h1>
-              <li>Django</li>
-              <li>React</li>
-              <li>Next.js</li>
-              <li>PostgreSQL</li>
-              <li>Restful API</li>
-            </ul>
-            <ul>
-              <h1>Certifications:</h1>
-              <li>
-                <a href="https://www.freecodecamp.org/certification/AtticusE/responsive-web-design" target="_blank">
-                  Responsive-Web-Design
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.freecodecamp.org/certification/AtticusE/javascript-algorithms-and-data-structures-v8"
-                  target="_blank"
-                >
-                  Java Script Algorithms and Data Structures
-                </a>
-              </li>
-              <li>
-                <a href="https://www.coursera.org/account/accomplishments/verify/NGJN6NRVQEQM" target="_blank">
-                  Databases and SQL for Python
-                </a>
-              </li>
-              <li>
-                <a href="https://www.coursera.org/account/accomplishments/verify/YWT8CXMSAEBS" target="_blank">
-                  Python for Data Science, AI & Development
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="flex justify-center p-8">
-        <img className="rounded-full object-cover" src="/profile.JPG"></img>
-      </div> */
-}
