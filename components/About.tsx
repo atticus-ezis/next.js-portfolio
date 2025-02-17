@@ -58,7 +58,7 @@ export const About = () => {
               studying TensorFlow to enhance my predictave ability.
             </p>
             <div className="flex justify-start items-center flex-wrap gap-4 mt-4">
-              <img src="/tensor.png" className="h-12" alt="TensorFlow" />
+              <img src="/tensor.png" className="h-8" alt="TensorFlow" />
             </div>
           </div>
         </div>
