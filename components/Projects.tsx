@@ -49,7 +49,7 @@ export const Projects = () => {
 
       <div className="flex flex-col sm:overflow-auto md:overflow-visible">
         <div className="relative w-screen md:mt-20">
-          <div className="md:absolute left-0 w-full max-h-screen overflow-y-auto md:overflow-x-auto justify-start">
+          <div className="left-0 w-full max-h-screen overflow-y-auto md:overflow-x-auto justify-start">
             <div className="flex flex-col items-center md:flex-row md:flex-nowrap">
               {projects.map((project, index) => (
                 <Card key={project.id + index} {...project} />
