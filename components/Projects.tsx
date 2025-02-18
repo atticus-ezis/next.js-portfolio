@@ -10,6 +10,7 @@ export const Projects = () => {
       description: 'Find events in your area and filter results based on category, date and venue.',
       image: 'Board4theBored.png',
       link: 'https://aezis.pythonanywhere.com/',
+      github: 'https://github.com/atticus-ezis/boardforthebored.git',
       skill: 'RESTful APIs, Auto-Complete Functionality, Data-filtering',
     },
     {
@@ -19,6 +20,7 @@ export const Projects = () => {
         'See what a blogsite run by the criminally insane would look like. Sign up, save posts, leave a comment, or even create a library of posts.',
       image: 'blogs4criminals.jpg',
       link: 'https://www.blogsforthecriminallyinsane.com/',
+      github: 'https://github.com/atticus-ezis/test_blog.git',
       skill: 'AWS hosting, User-Authentication, CRUD functionality.',
     },
     {
@@ -27,6 +29,7 @@ export const Projects = () => {
       description: 'Portfolio of my music. Shuffle, download and like tracks.',
       image: 'TheMix.png',
       link: 'https://atticus-ezis.github.io/BEATS-BY-ME/',
+      github: 'https://github.com/atticus-ezis/BEATS-BY-ME.git',
       skill: 'Realtime database',
     },
     {
@@ -35,15 +38,16 @@ export const Projects = () => {
       description: 'Play this game to test your interval recognition and improve as a musician.',
       image: 'EarDojo.png',
       link: 'https://atticus-ezis.github.io/Ear-Training/',
+      github: 'https://github.com/atticus-ezis/Ear-Training.git',
       skill: 'HTML, CSS, JavaScript',
     },
   ];
 
   return (
     <>
-      <div className="container mx-auto h-screen overflow-hidden">
+      <div className="container mx-auto h-screen overflow-scroll">
         <div className="text-5xl font-bold text-center mt-24 mb-8 md:mt-20">Projects</div>
-        <div className="flex flex-col md:flex-row">
+        <div className="center md:flex-row ">
           {projects.map((project, index) => (
             <Card key={project.id + index} {...project} />
           ))}
