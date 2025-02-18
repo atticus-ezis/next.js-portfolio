@@ -2,8 +2,8 @@ import React from 'react';
 
 export const About = () => {
   return (
-    <div className="container h-screen mx-auto px-6 py-12 lg:px-16 bg-gray-100 rounded-lg shadow-lg">
-      <h1 className="text-5xl text-gray-700 font-bold text-center mt-10 md:mb-3">About</h1>
+    <div className="container h-screen mx-auto px-6 lg:px-16 bg-gray-100 rounded-lg mt-20">
+      <h1 className="text-5xl text-gray-700 font-bold text-center mt-3 md:mb-3">About</h1>
 
       <div className="flex flex-col md:flex-row gap-8">
         {/* Left Content Section */}
