@@ -30,7 +30,7 @@ export const Projects = () => {
       image: 'TheMix.png',
       link: 'https://atticus-ezis.github.io/BEATS-BY-ME/',
       github: 'https://github.com/atticus-ezis/BEATS-BY-ME.git',
-      skill: 'Realtime database',
+      skill: 'Realtime Database',
     },
     {
       id: 3,
@@ -45,12 +45,14 @@ export const Projects = () => {
 
   return (
     <>
-      <div className="container mx-auto h-screen overflow-scroll">
-        <div className="text-5xl font-bold text-center mt-24 mb-8 md:mt-20">Projects</div>
-        <div className="center md:flex-row h-full md:h-auto overflow-scroll">
-          {projects.map((project, index) => (
-            <Card key={project.id + index} {...project} />
-          ))}
+      <div className="container mx-auto h-screen center">
+        <div className="text-5xl font-bold mt-24 mb-8 md:mt-20">Projects</div>
+        <div className="flex-grow h-0 overflow-auto">
+          <div className="center md:flex-row">
+            {projects.map((project, index) => (
+              <Card key={project.id + index} {...project} />
+            ))}
+          </div>
         </div>
       </div>
     </>
