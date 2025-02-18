@@ -47,7 +47,7 @@ export const Projects = () => {
     <>
       <div className="container mx-auto h-screen overflow-scroll">
         <div className="text-5xl font-bold text-center mt-24 mb-8 md:mt-20">Projects</div>
-        <div className="center md:flex-row ">
+        <div className="center md:flex-row h-full md:h-auto overflow-scroll">
           {projects.map((project, index) => (
             <Card key={project.id + index} {...project} />
           ))}
