@@ -51,7 +51,7 @@ export const About = () => {
           </div>
 
           {/* LMM Development Section */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white p-6 rounded-lg shadow-md mb-4">
             <h2 className="text-2xl font-semibold mb-2  text-gray-400">LMM Development</h2>
             <p className="text-gray-700">
               I develop RAG applications using Large Language Models, including the AI on this site. Currently, I’m
