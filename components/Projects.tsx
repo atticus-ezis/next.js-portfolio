@@ -47,7 +47,7 @@ export const Projects = () => {
     <div className="container mx-auto h-screen flex flex-col items-center justify-start relative">
       <div className="text-5xl font-bold mt-20 mb-8">Projects</div>
 
-      <div className="flex flex-col sm:overflow-auto md:overflow-visible">
+      <div className="flex flex-col sm:overflow-auto">
         <div className="relative w-screen md:mt-20">
           <div className="left-0 w-full max-h-screen overflow-y-auto md:overflow-x-auto justify-start">
             <div className="flex flex-col items-center md:flex-row md:flex-nowrap">
