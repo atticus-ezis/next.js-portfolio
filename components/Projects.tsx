@@ -44,17 +44,16 @@ export const Projects = () => {
   ];
 
   return (
-    <>
-      <div className="container mx-auto h-screen center">
-        <div className="text-5xl font-bold mt-24 mb-8 md:mt-20">Projects</div>
-        <div className="flex-grow h-0 overflow-auto">
-          <div className="center md:flex-row">
-            {projects.map((project, index) => (
-              <Card key={project.id + index} {...project} />
-            ))}
-          </div>
+    <div className="container mx-auto h-screen center">
+      <div className="text-5xl font-bold mt-24 mb-8 md:mt-20">Projects</div>
+
+      <div className="flex-grow h-0 overflow-auto">
+        <div className="center md:flex-row order-none">
+          {projects.map((project, index) => (
+            <Card key={project.id + index} {...project} />
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
