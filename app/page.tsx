@@ -2,30 +2,31 @@ import { AiChat, About, Projects, Experience, Footer, Header, Wrapper, Hero } fr
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen snap-y snap-mandatory overflow-y-auto">
-      <Header />
+    <>
+      <div className="relative flex flex-col h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
+        <Header />
+        <Wrapper id="hero">
+          <Hero />
+        </Wrapper>
 
-      <Wrapper id="hero">
-        <Hero />
-      </Wrapper>
+        <Wrapper id="ai">
+          <AiChat />
+        </Wrapper>
 
-      <Wrapper id="ai">
-        <AiChat />
-      </Wrapper>
+        <Wrapper id="about">
+          <About />
+        </Wrapper>
 
-      <Wrapper id="about">
-        <About />
-      </Wrapper>
+        <Wrapper id="projects">
+          <Projects />
+        </Wrapper>
 
-      <Wrapper id="projects">
-        <Projects />
-      </Wrapper>
+        <Wrapper id="experience">
+          <Experience />
+        </Wrapper>
 
-      <Wrapper id="experience">
-        <Experience />
-      </Wrapper>
-
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 }
