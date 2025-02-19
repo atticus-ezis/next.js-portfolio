@@ -2,7 +2,7 @@ import { AiChat, About, Projects, Experience, Footer, Header, Wrapper, Hero } fr
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen h-screen snap-y snap-mandatory overflow-y-auto">
+    <div className="flex flex-col min-h-screen snap-y snap-mandatory overflow-y-auto">
       <Header />
 
       <Wrapper id="hero">
