@@ -18,29 +18,24 @@ export default function Home() {
   }, []);
   return (
     <>
-      <div className="dynamic-vh flex flex-col overflow-y-auto scroll-smooth snap-y snap-mandatory relative ">
-        <Header />
+      <div className="dynamic-vh md:h-screen overflow-y-auto flex flex-col scroll-smooth snap-y snap-mandatory relative ">
+        <Header /> {/* doesn't appear */}
         <Wrapper id="hero">
           <Hero />
         </Wrapper>
-
         <Wrapper id="ai">
           <AiChat />
         </Wrapper>
-
         <Wrapper id="about">
           <About />
         </Wrapper>
-
         <Wrapper id="projects">
-          <Projects />
+          <Projects /> {/* fit carosel to full width and enhance styling */}
         </Wrapper>
-
         <Wrapper id="experience">
           <Experience />
         </Wrapper>
-
-        <Footer />
+        <Footer /> {/* restrict width for better content visibility*/}
       </div>
     </>
   );
