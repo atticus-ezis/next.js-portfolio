@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.center {
-  @apply flex flex-col justify-center items-center;
-}
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -27,4 +23,14 @@ body {
 textarea {
   border: none;
   outline: none;
+}
+
+.center {
+  @apply flex flex-col justify-center items-center;
+}
+
+@layer utilities {
+  .dynamic-vh {
+    height: calc(var(--vh, 1vh) * 100);
+  }
 }

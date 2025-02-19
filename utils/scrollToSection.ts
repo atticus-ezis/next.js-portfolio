@@ -1,12 +1,7 @@
-export const scrollToSection = (id: string, instant: boolean = false) => {
+export const scrollToSection = (id: string) => {
   const section = document.getElementById(id);
   if (section) {
-    window.scrollTo({
-      top: section.offsetTop,
-      behavior: instant ? "auto" : "smooth", // Instant scroll if needed
-    });
-
-    // Update URL without refreshing the page
-    window.history.pushState(null, "", `#${id}`);
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.history.pushState(null, '', `#${id}`);
   }
 };

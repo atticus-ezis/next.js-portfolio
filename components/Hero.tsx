@@ -3,17 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {} from '@/utils/scrollToSection';
-
-const scrollToSection = (id: string) => {
-  const section = document.getElementById(id);
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // Ensure the URL updates
-    window.history.pushState(null, '', `#${id}`);
-  }
-};
+import { scrollToSection } from '@/utils/scrollToSection';
 
 export const Hero = () => {
   return (
