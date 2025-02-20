@@ -2,12 +2,12 @@ import React from 'react';
 
 export const About = () => {
   return (
-    <div className="container mx-auto h-screen py-12">
-      <div className="px-6 pb-10 bg-gray-100 rounded-lg">
+    <div className="container mx-auto h-screen py-3">
+      <div className="px-6 bg-gray-100 rounded-lg">
         <h1 className="text-5xl text-gray-700 font-bold text-center p-4">About</h1>
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left Content Section */}
-          <div className="w-full md:w-2/3 flex flex-col justify-between gap-4">
+          <div className="h-[80vh] overflow-y-auto md:w-2/3 flex flex-col justify-between gap-4">
             {/* Web Design Section */}
             <div className="bg-white p-6 rounded-lg shadow-md">
               <h2 className="text-2xl font-semibold mb-2 text-gray-400">
@@ -64,7 +64,7 @@ export const About = () => {
           </div>
 
           {/* Right Profile Section */}
-          <div className="w-full order-first md:order-none md:w-1/3 flex flex-col items-center">
+          <div className="order-first md:order-none flex flex-col items-center">
             <img
               className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover mt-5 shadow-md"
               src="/profile.JPG"
