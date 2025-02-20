@@ -3,7 +3,7 @@ import React from 'react';
 function Card({ image, title, description, link, github, skill }) {
   return (
     <>
-      <div className="min-w-[400px] max-w-[400px]">
+      <div className="w-[300px] h-[300px] bg-green-400 rounded-lg p-1">
         {/* title */}
         <h1 className="text-center text-xl font-bold">{title}</h1>
         {/* card */}
