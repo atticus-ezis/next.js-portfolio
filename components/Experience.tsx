@@ -2,11 +2,11 @@ import React from 'react';
 
 export const Experience = () => {
   return (
-    <div className="container mx-auto h-screen w-full rounded-lg mt-20 p-3">
-      <div className="text-center text-5xl font-bold my-3">Experience</div>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <div className="text-center text-5xl font-bold">Experience</div>
 
       {/* Experience Block */}
-      <div className="border rounded-lg p-6 shadow-lg bg-white mt-12">
+      <div className="h-fit border rounded-lg p-6 shadow-lg bg-white mt-12">
         {/* Job Title */}
         <h2 className="text-2xl font-bold text-gray-800">Junior Developer for AmericanLiterature.com</h2>
         <h3 className="text-gray-500">(July 2024 - Present)</h3>
