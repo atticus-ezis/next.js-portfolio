@@ -4,9 +4,12 @@ import { useState } from 'react';
 
 export const AiChat = () => {
   const [message, setMessage] = useState('');
-  const [response, setResponse] = useState('');
+  const [response, setResponse] = useState('test');
   const [loading, setLoading] = useState(false);
-  const [history, setHistory] = useState<{ question: string; answer: string }[]>([]);
+  const [history, setHistory] = useState<{ question: string; answer: string }[]>([
+    { question: 'jhsagfjhasbfjhsabfmas afshjfgjhsagfjhsa sfsa', answer: 'kjsabfakjasbhkjfas' },
+    { question: 'jhsagfjhasbfjhsabfmas afshjfgjhsagfjhsa sfsa', answer: 'kjsabfakjasbhkjfas' },
+  ]);
 
   const sendMessage = async () => {
     if (!message) return;
