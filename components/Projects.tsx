@@ -51,12 +51,14 @@ export const Projects = () => {
   return (
     <div className="h-[85vh] relative top-12 flex flex-col justify-center items-center">
       {/* Title (outside the scrollable container) */}
-      <div className="font-bold text-5xl text-center p-10">Projects</div>
+      <div className="font-bold text-5xl text-center p-10 sticky">Projects</div>
       {/* Scrollable cards container */}
-      <div className="h-[80vh] flex flex-col justify-start md:justify-center gap-4 md:flex-row md:flex-wrap overflow-y-auto">
-        {projects.map((project, index) => (
-          <Card key={project.id + index} {...project} />
-        ))}
+      <div className="h-[80vh] w-full md:overflow-x-auto overflow-y-auto">
+        <div className="flex flex-col justify-start items-center md:flex-row gap-4 ">
+          {projects.map((project, index) => (
+            <Card key={project.id + index} {...project} />
+          ))}
+        </div>
       </div>
     </div>
   );

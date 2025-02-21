@@ -2,7 +2,7 @@ import React from 'react';
 
 function Card({ image, title, description, link, github, skill }) {
   return (
-    <div className="w-[320px] h-fit bg-white rounded-xl p-4 flex flex-col items-center">
+    <div className="w-[320px] h-fit bg-white rounded-xl p-4 flex flex-col flex-shrink-0 items-center">
       <h1 className="text-center text-2xl font-bold text-gray-600 mb-3 w-full truncate overflow-hidden text-ellipsis whitespace-nowrap">
         {title}
       </h1>
