@@ -49,7 +49,7 @@ export const Projects = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center">
+    <div className="h-[85vh] relative top-12 flex flex-col justify-center items-center">
       {/* Title (outside the scrollable container) */}
       <div className="font-bold text-5xl text-center p-10">Projects</div>
       {/* Scrollable cards container */}
