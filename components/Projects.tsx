@@ -53,7 +53,7 @@ export const Projects = () => {
       {/* Title (outside the scrollable container) */}
       <div className="font-bold text-5xl text-center p-10 sticky">Projects</div>
       {/* Scrollable cards container */}
-      <div className="h-[80vh] w-full md:overflow-x-auto overflow-y-auto">
+      <div className="h-[80vh] w-full md:overflow-x-auto overflow-y-auto no-scrollbar">
         <div className="flex flex-col justify-start items-center md:flex-row gap-4 ">
           {projects.map((project, index) => (
             <Card key={project.id + index} {...project} />

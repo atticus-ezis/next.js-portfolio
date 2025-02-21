@@ -3,7 +3,7 @@ import React from 'react';
 export const About = () => {
   return (
     <div className="h-[85vh] relative top-14 flex flex-col items-center justify-start">
-      <div className="px-6 bg-gray-100 h-fit rounded-lg overflow-y-auto">
+      <div className="px-6 bg-gray-100 h-fit rounded-lg overflow-y-auto no-scrollbar">
         <h1 className="text-5xl text-gray-700 font-bold text-center p-4">About</h1>
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left Content Section */}
