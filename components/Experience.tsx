@@ -2,25 +2,24 @@ import React from 'react';
 
 export const Experience = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex h-screen flex-col items-center justify-center">
       <div className="text-center text-5xl font-bold">Experience</div>
 
-      {/* Experience Block */}
-      <div className="h-fit border rounded-lg p-6 shadow-lg bg-white mt-12">
+      <div className="mt-12 h-fit rounded-lg border bg-white p-6 shadow-lg">
         {/* Job Title */}
         <h2 className="text-2xl font-bold text-gray-800">Junior Developer for AmericanLiterature.com</h2>
         <h3 className="text-gray-500">(July 2024 - Present)</h3>
 
         {/* Job Responsibilities */}
         <div className="mt-4 text-gray-600">
-          <h3 className="text-black font-bold">Duties:</h3>
-          <ul className="list-disc list-inside font-semibold">
+          <h3 className="font-bold text-black">Duties:</h3>
+          <ul className="list-inside list-disc font-semibold">
             <li>Improved UX with new library design.</li>
             <li>Maintained codebase, updated and managed content, created error pages.</li>
           </ul>
 
-          <h3 className="text-black font-bold mt-4">Skills:</h3>
-          <ul className="list-disc list-inside">
+          <h3 className="mt-4 font-bold text-black">Skills:</h3>
+          <ul className="list-inside list-disc">
             <li>
               Queried the site's PostgreSQL database to gather story information such as rating, image, and preface.
             </li>

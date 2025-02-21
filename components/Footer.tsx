@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const Footer = () => {
   return (
-    <footer className="fixed bottom-0 w-full p-4 flex gap-6 flex-wrap items-center justify-center z-10 bg-[#0a0a0a]">
+    <footer className="fixed bottom-0 z-10 flex w-full flex-wrap items-center justify-center gap-6 bg-[#0a0a0a] p-4">
       <a
         className="flex items-center gap-2 hover:underline hover:underline-offset-4"
         href="https://github.com/atticus-ezis"

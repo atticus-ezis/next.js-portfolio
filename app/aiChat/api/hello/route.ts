@@ -44,19 +44,17 @@ const projects = [
     link:https://www.blogsforthecriminallyinsane.com/',
 ];
 
-// function that makes API Call and returns a response
+// API Call - pass message from AiChat.tsx as req to GPT and return Response
 
 export async function POST(req: Request) {
   const apiKey = (process.env.OPENAI_API_KEY || '').trim();
   try {
-    const { message } = await req.json(); // message from page.tsx
+    const { message } = await req.json();
 
     if (!message) {
       return Response.json({ error: 'Message is required' }, { status: 400 });
     }
-
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      // pass message and directions to gpt
       method: 'POST',
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -81,7 +79,7 @@ export async function POST(req: Request) {
       }),
     });
 
-    const data = await response.json(); // JSON -> JS
+    const data = await response.json();
     return Response.json(data);
   } catch (error) {
     return Response.json({ error: error instanceof Error ? error.message : 'Unknown error' }, { status: 500 });

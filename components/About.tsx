@@ -2,15 +2,15 @@ import React from 'react';
 
 export const About = () => {
   return (
-    <div className="h-[85vh] relative top-14 flex flex-col items-center justify-start">
-      <div className="px-6 bg-gray-100 h-fit rounded-lg overflow-y-auto no-scrollbar">
-        <h1 className="text-5xl text-gray-700 font-bold text-center p-4">About</h1>
-        <div className="flex flex-col md:flex-row gap-8">
+    <div className="relative top-14 flex h-[85vh] flex-col items-center justify-start">
+      <div className="no-scrollbar h-full overflow-y-auto rounded-lg bg-gray-100 px-6">
+        <h1 className="p-4 text-center text-5xl font-bold text-gray-700">About</h1>
+        <div className="flex flex-col gap-8 md:flex-row">
           {/* Left Content Section */}
-          <div className="max-h-[80vh] md:w-2/3 flex flex-col justify-between gap-4">
+          <div className="flex flex-col justify-between gap-4 md:w-2/3">
             {/* Web Design Section */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-2 text-gray-400">
+            <div className="rounded-lg bg-white p-6 shadow-md">
+              <h2 className="mb-2 text-2xl font-semibold text-gray-400">
                 <code>Web Design</code>
               </h2>
               <p className="text-gray-700">
@@ -19,10 +19,10 @@ export const About = () => {
                   AmericanLiterature.com
                 </a>
                 , a platform with over 400,000 visitors per month. I'm also familiar with other Model-View-Controller
-                frameworks like Ruby and Next.js.
+                frameworks like Ruby and Next.js. As well as front end tools like React, Tailwind and Bootstrap.
               </p>
 
-              <div className="flex justify-start items-center flex-wrap gap-4 mt-4">
+              <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
                 <img src="/django.svg" className="h-12" alt="Django" />
                 <img src="/postgre.svg" className="h-12" alt="PostgreSQL" />
                 <img src="/react.svg" className="h-12" alt="React" />
@@ -33,8 +33,8 @@ export const About = () => {
             </div>
 
             {/* Data Analytics Section */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-2  text-gray-400">
+            <div className="rounded-lg bg-white p-6 shadow-md">
+              <h2 className="mb-2 text-2xl font-semibold text-gray-400">
                 <code>Data Analytics</code>
               </h2>
               <p className="text-gray-700">
@@ -42,7 +42,7 @@ export const About = () => {
                 my investment return by 24%.
               </p>
 
-              <div className="flex justify-start items-center flex-wrap gap-4 mt-4">
+              <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
                 <img src="/SQL.svg" className="h-12" alt="SQL" />
                 <img src="/python.jpeg" className="h-12" alt="Python" />
                 <img src="/pandas.png" className="h-12" alt="Pandas" />
@@ -51,22 +51,22 @@ export const About = () => {
             </div>
 
             {/* LMM Development Section */}
-            <div className="bg-white p-6 rounded-lg shadow-md mb-4">
-              <h2 className="text-2xl font-semibold mb-2  text-gray-400">LMM Development</h2>
+            <div className="mb-4 rounded-lg bg-white p-6 shadow-md">
+              <h2 className="mb-2 text-2xl font-semibold text-gray-400">LMM Development</h2>
               <p className="text-gray-700">
                 I develop RAG applications using Large Language Models, including the AI on this site. Currently, I’m
                 studying TensorFlow to enhance my predictave ability.
               </p>
-              <div className="flex justify-start items-center flex-wrap gap-4 mt-4">
+              <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
                 <img src="/tensor.png" className="h-8" alt="TensorFlow" />
               </div>
             </div>
           </div>
 
           {/* Right Profile Section */}
-          <div className="order-first md:order-none flex flex-col items-center">
+          <div className="order-first flex flex-col items-center md:order-none">
             <img
-              className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover mt-5 shadow-md"
+              className="mt-5 h-64 w-64 rounded-full object-cover shadow-md md:h-80 md:w-80"
               src="/profile.JPG"
               alt="Profile"
             />

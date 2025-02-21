@@ -42,19 +42,12 @@ export const Projects = () => {
       skill: 'HTML, CSS, JavaScript',
     },
   ];
-  {
-    /* 1. relative must be a parent of absolute 
-      2. 
-  */
-  }
 
   return (
-    <div className="h-[85vh] relative top-12 flex flex-col justify-center items-center">
-      {/* Title (outside the scrollable container) */}
-      <div className="font-bold text-5xl text-center p-10 sticky">Projects</div>
-      {/* Scrollable cards container */}
-      <div className="h-[80vh] w-full md:overflow-x-auto overflow-y-auto no-scrollbar">
-        <div className="flex flex-col justify-start items-center md:flex-row gap-4 ">
+    <div className="relative top-12 flex h-[85vh] flex-col items-center justify-center">
+      <div className="p-10 text-center text-5xl font-bold">Projects</div>
+      <div className="no-scrollbar h-[80vh] w-full overflow-y-auto md:overflow-x-auto">
+        <div className="flex flex-col items-center justify-start gap-4 md:flex-row">
           {projects.map((project, index) => (
             <Card key={project.id + index} {...project} />
           ))}
@@ -63,10 +56,3 @@ export const Projects = () => {
     </div>
   );
 };
-
-{
-  /*
-
-
-*/
-}

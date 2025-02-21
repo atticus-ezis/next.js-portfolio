@@ -17,26 +17,24 @@ export default function Home() {
     };
   }, []);
   return (
-    <>
-      <div className="dynamic-vh md:h-screen overflow-y-auto flex flex-col scroll-smooth snap-y snap-mandatory relative ">
-        <Header /> {/* doesn't appear */}
-        <Wrapper id="hero">
-          <Hero />
-        </Wrapper>
-        <Wrapper id="ai">
-          <AiChat />
-        </Wrapper>
-        <Wrapper id="about">
-          <About />
-        </Wrapper>
-        <Wrapper id="projects">
-          <Projects /> {/* fit carosel to full width and enhance styling */}
-        </Wrapper>
-        <Wrapper id="experience">
-          <Experience />
-        </Wrapper>
-        <Footer /> {/* restrict width for better content visibility*/}
-      </div>
-    </>
+    <div className="dynamic-vh relative flex snap-y snap-mandatory flex-col overflow-y-auto scroll-smooth md:h-screen">
+      <Header /> {/* doesn't appear */}
+      <Wrapper id="hero">
+        <Hero />
+      </Wrapper>
+      <Wrapper id="ai">
+        <AiChat />
+      </Wrapper>
+      <Wrapper id="about">
+        <About />
+      </Wrapper>
+      <Wrapper id="projects">
+        <Projects />
+      </Wrapper>
+      <Wrapper id="experience">
+        <Experience />
+      </Wrapper>
+      <Footer />
+    </div>
   );
 }

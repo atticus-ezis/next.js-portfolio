@@ -17,8 +17,6 @@ export const Header = () => {
       } else {
         setHideHeader(true);
       }
-
-      console.log('hero bottom is: ', bound.bottom);
     };
 
     checkHero();
@@ -31,11 +29,11 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full p-4 flex gap-6 justify-center mr-0 z-10 transition-opacity duration-400 ${
-        hideHeader ? 'opacity-0 pointer-events-none' : 'opacity-100'
+      className={`duration-400 fixed top-0 z-10 mr-0 flex w-full justify-center gap-6 p-4 transition-opacity ${
+        hideHeader ? 'pointer-events-none opacity-0' : 'opacity-100'
       }`}
     >
-      <nav className="bg-[#21212150] backdrop-blur-[6px] justify-center fixed top-0 w-full  shadow-md p-4 flex gap-4">
+      <nav className="fixed top-0 flex w-full justify-center gap-4 bg-[#21212150] p-4 shadow-md backdrop-blur-[6px]">
         <NavLink section="ai" name="ai" />
         <NavLink section="about" name="about" />
         <NavLink section="projects" name="projects" />
@@ -54,7 +52,7 @@ const NavLink = ({ section, name }: { section: string; name: string }) => {
         scrollToSection(section);
         window.history.pushState(null, '', `#${section}`);
       }}
-      className="cursor-pointer hover:underline hover:underline-offset-4 text-white hover:text-gray-500"
+      className="cursor-pointer text-white hover:text-gray-500 hover:underline hover:underline-offset-4"
     >
       {name.toUpperCase()}
     </Link>

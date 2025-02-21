@@ -31,12 +31,12 @@ export const AiChat = () => {
   };
 
   return (
-    <div id="main-block" className="container h-screen w-3/4 md:w-1/2 mx-auto center">
+    <div id="main-block" className="center container mx-auto h-screen w-3/4 md:w-1/2">
       {/* reponse - top half */}
       {!response && history.length === 0 ? (
-        <div id="response-block" className="w-full h-[50%] flex flex-col justify-end">
+        <div id="response-block" className="flex h-[50%] w-full flex-col justify-end">
           {!loading ? (
-            <div className="text-5xl text-center mb-8">Nice to Meet you</div>
+            <div className="mb-8 text-center text-5xl">Nice to Meet you</div>
           ) : (
             <div id="loading" className="flex text-lg">
               Thinking...
@@ -44,14 +44,14 @@ export const AiChat = () => {
           )}
         </div>
       ) : (
-        <div id="response-block" className="w-full h-[75%] flex flex-col justify-end">
-          <div id="chat-history" className="w-full flex flex-col-reverse overflow-y-auto">
+        <div id="response-block" className="flex h-[75%] w-full flex-col justify-end">
+          <div id="chat-history" className="flex w-full flex-col-reverse overflow-y-auto">
             {history.map((entry, index) => (
               <div key={index} className="flex flex-col">
-                <div id="message" className="self-end max-w-80 p-2 bg-blue-500 rounded-lg m-2">
+                <div id="message" className="m-2 max-w-80 self-end rounded-lg bg-blue-500 p-2">
                   {entry.question}
                 </div>
-                <div id="response" className="max-w-80 self-start p-2 bg-green-700 rounded-lg m-2">
+                <div id="response" className="m-2 max-w-80 self-start rounded-lg bg-green-700 p-2">
                   {entry.answer}
                 </div>
               </div>
@@ -65,9 +65,9 @@ export const AiChat = () => {
       )}
 
       {/* message - bottom half */}
-      <div id="message-block" className="w-full flex-1 flex flex-col items-center">
+      <div id="message-block" className="flex w-full flex-1 flex-col items-center">
         <textarea
-          className="w-full bg-[#21212150] text-white rounded-lg p-4"
+          className="w-full rounded-lg bg-[#21212150] p-4 text-white"
           value={message}
           placeholder="Ask me about my background..."
           onChange={(e) => setMessage(e.target.value)}
