@@ -8,7 +8,7 @@ import { scrollToSection } from '@/utils/scrollToSection';
 export const Hero = () => {
   return (
     <div className="center container mx-auto h-screen gap-8">
-      <div className="text-5xl">Hello, I'm Atticus</div>
+      <div className="text-5xl">Hello, I&apos;m Atticus</div>
       <div className="flex gap-4">
         <Link
           className="flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent bg-foreground px-4 text-sm text-background transition-colors hover:bg-[#383838] sm:h-12 sm:px-5 sm:text-base dark:hover:bg-[#ccc]"

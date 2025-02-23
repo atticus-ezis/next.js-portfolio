@@ -21,7 +21,8 @@ export const Experience = () => {
           <h3 className="mt-4 font-bold text-black">Skills:</h3>
           <ul className="list-inside list-disc">
             <li>
-              Queried the site's PostgreSQL database to gather story information such as rating, image, and preface.
+              Queried the site&apos;s PostgreSQL database to gather story information such as rating, image, and
+              preface.
             </li>
             <li>Rendered information client-side dynamically with JavaScript.</li>
           </ul>

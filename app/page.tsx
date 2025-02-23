@@ -5,7 +5,7 @@ import { AiChat, About, Projects, Experience, Footer, Header, Wrapper, Hero } fr
 export default function Home() {
   useEffect(() => {
     const setVh = () => {
-      let vh = window.innerHeight * 0.01;
+      const vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     };
 

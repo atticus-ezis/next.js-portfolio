@@ -14,12 +14,14 @@ export const About = () => {
                 <code>Web Design</code>
               </h2>
               <p className="text-gray-700">
-                I'm a full-stack web developer, specializing in frameworks like Django, contributing to the redesign of{' '}
+                I&apos;m a full-stack web developer, specializing in frameworks like Django, contributing to the
+                redesign of{' '}
                 <a href="https://americanliterature.com/" className="text-blue-500 hover:underline">
                   AmericanLiterature.com
                 </a>
-                , a platform with over 400,000 visitors per month. I'm also familiar with other Model-View-Controller
-                frameworks like Ruby and Next.js. As well as front end tools like React, Tailwind and Bootstrap.
+                , a platform with over 400,000 visitors per month. I&apos;m also familiar with other
+                Model-View-Controller frameworks like Ruby and Next.js. As well as front end tools like React, Tailwind
+                and Bootstrap.
               </p>
 
               <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
@@ -38,8 +40,8 @@ export const About = () => {
                 <code>Data Analytics</code>
               </h2>
               <p className="text-gray-700">
-                I've applied linear regressions and standard deviations in Python to predict crypto pricing, increasing
-                my investment return by 24%.
+                I&apos;ve applied linear regressions and standard deviations in Python to predict crypto pricing,
+                increasing my investment return by 24%.
               </p>
 
               <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
@@ -54,8 +56,8 @@ export const About = () => {
             <div className="mb-4 rounded-lg bg-white p-6 shadow-md">
               <h2 className="mb-2 text-2xl font-semibold text-gray-400">LMM Development</h2>
               <p className="text-gray-700">
-                I develop RAG applications using Large Language Models, including the AI on this site. Currently, I’m
-                studying TensorFlow to enhance my predictave ability.
+                I develop RAG applications using Large Language Models, including the AI on this site. Currently,
+                I&apos;m studying TensorFlow to enhance my predictave ability.
               </p>
               <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
                 <img src="/tensor.png" className="h-8" alt="TensorFlow" />
