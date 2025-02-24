@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "npm install && npm run build",
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start -p ${PORT:-3000}",
+    "start": "NODE_ENV=production node .next/standalone/server.js",
+    "start:dev": "next dev",
     "lint": "next lint"
   },
   "dependencies": {
