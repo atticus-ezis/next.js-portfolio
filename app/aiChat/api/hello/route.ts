@@ -47,8 +47,11 @@ const projects = [
 // API Call - pass message from AiChat.tsx as req to GPT and return Response
 
 export async function POST(req: Request) {
+  const start = Date.now();
+  console.log(`🕒 Request received at: ${new Date().toISOString()}`);
+
   const apiKey = (process.env.OPENAI_API_KEY || '').trim();
-  if (!apiKey) console.error('NO API KEY FOUND');
+
   if (apiKey) console.log('API KEY FOUND');
   try {
     const { message } = await req.json();
@@ -56,6 +59,12 @@ export async function POST(req: Request) {
     if (!message) {
       return Response.json({ error: 'Message is required' }, { status: 400 });
     }
+
+    console.log(`📡 Sending request to OpenAI at: ${new Date().toISOString()}`);
+
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 10000);
+
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -80,6 +89,16 @@ export async function POST(req: Request) {
         ],
       }),
     });
+
+    clearTimeout(timeout);
+    console.log(`✅ OpenAI responded at: ${new Date().toISOString()}`);
+    console.log(`📊 OpenAI API Response Status: ${response.status}`);
+
+    if (!response.ok) {
+      const errorData = await response.text();
+      console.error(`❌ OpenAI API Error: ${errorData}`);
+      return new Response(JSON.stringify({ error: errorData }), { status: response.status });
+    }
 
     const data = await response.json();
     return Response.json(data);

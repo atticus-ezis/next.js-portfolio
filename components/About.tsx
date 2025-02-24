@@ -70,7 +70,7 @@ export const About = () => {
           <div className="order-first flex flex-col items-center md:order-none">
             <Image
               className="mt-5 h-64 w-64 rounded-full object-cover shadow-md md:h-80 md:w-80"
-              src="/profile.JPG"
+              src="/profile.jpeg"
               alt="Profile"
             />
           </div>
