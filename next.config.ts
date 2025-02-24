@@ -1,10 +1,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
-  images: {
-    loader: 'default',
-  },
+  /* config options here */
 };
 
 export default nextConfig;

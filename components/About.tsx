@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const About = () => {
   return (
@@ -25,12 +26,12 @@ export const About = () => {
               </p>
 
               <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
-                <img src="/django.svg" className="h-12" alt="Django" />
-                <img src="/postgre.svg" className="h-12" alt="PostgreSQL" />
-                <img src="/react.svg" className="h-12" alt="React" />
-                <img src="/bootstrap.svg" className="h-12" alt="Bootstrap" />
-                <img src="/tailwind.svg" className="h-12" alt="Tailwind CSS" />
-                <img src="/aws.svg" className="h-8" alt="AWS" />
+                <Image src="/django.svg" className="h-12" alt="Django" />
+                <Image src="/postgre.svg" className="h-12" alt="PostgreSQL" />
+                <Image src="/react.svg" className="h-12" alt="React" />
+                <Image src="/bootstrap.svg" className="h-12" alt="Bootstrap" />
+                <Image src="/tailwind.svg" className="h-12" alt="Tailwind CSS" />
+                <Image src="/aws.svg" className="h-8" alt="AWS" />
               </div>
             </div>
 
@@ -45,10 +46,10 @@ export const About = () => {
               </p>
 
               <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
-                <img src="/SQL.svg" className="h-12" alt="SQL" />
-                <img src="/python.jpeg" className="h-12" alt="Python" />
-                <img src="/pandas.png" className="h-12" alt="Pandas" />
-                <img src="/NumPy.png" className="h-12" alt="NumPy" />
+                <Image src="/SQL.svg" className="h-12" alt="SQL" />
+                <Image src="/python.jpeg" className="h-12" alt="Python" />
+                <Image src="/pandas.png" className="h-12" alt="Pandas" />
+                <Image src="/NumPy.png" className="h-12" alt="NumPy" />
               </div>
             </div>
 
@@ -60,14 +61,14 @@ export const About = () => {
                 I&apos;m studying TensorFlow to enhance my predictave ability.
               </p>
               <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
-                <img src="/tensor.png" className="h-8" alt="TensorFlow" />
+                <Image src="/tensor.png" className="h-8" alt="TensorFlow" />
               </div>
             </div>
           </div>
 
           {/* Right Profile Section */}
           <div className="order-first flex flex-col items-center md:order-none">
-            <img
+            <Image
               className="mt-5 h-64 w-64 rounded-full object-cover shadow-md md:h-80 md:w-80"
               src="/profile.JPG"
               alt="Profile"
