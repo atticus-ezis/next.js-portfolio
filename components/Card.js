@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 
 function Card({ image, title, description, link, github, skill }) {
   return (
@@ -9,7 +8,7 @@ function Card({ image, title, description, link, github, skill }) {
       </h1>
       <div className="group relative w-full overflow-hidden rounded-lg shadow-xl transition-transform duration-300 hover:scale-105 hover:shadow-xl">
         <a className="block" href={`${link}`} target="_blank">
-          <Image
+          <img
             className="mx-auto h-48 w-full rounded-lg border-x-2 border-gray-400 object-cover"
             src={`/${image}`}
             alt={title}
@@ -27,7 +26,7 @@ function Card({ image, title, description, link, github, skill }) {
         </div>
         <div className="flex-shrink-0 transition-transform hover:scale-105 hover:cursor-pointer">
           <a href={`${github}`}>
-            <Image src="/github.svg" className="h-12 w-12 flex-shrink-0" alt=" GitHub Log" />
+            <img src="/github.svg" className="h-12 w-12 flex-shrink-0" alt=" GitHub Log" />
           </a>
         </div>
       </div>
