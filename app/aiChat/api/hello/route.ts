@@ -48,6 +48,8 @@ const projects = [
 
 export async function POST(req: Request) {
   const apiKey = (process.env.OPENAI_API_KEY || '').trim();
+  if (!apiKey) console.error('NO API KEY FOUND');
+  if (apiKey) console.log('API KEY FOUND');
   try {
     const { message } = await req.json();
 
