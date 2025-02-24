@@ -52,7 +52,7 @@ export async function GET() {
   });
 }
 export async function POST(req: Request) {
-  const apiKey = (process.env.OPENAI_API_KEY || '').trim();
+  const apiKey = (process.env.PROD_API_KEY || '').trim();
 
   try {
     const { message } = await req.json();
