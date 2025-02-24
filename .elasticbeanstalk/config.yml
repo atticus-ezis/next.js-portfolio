@@ -1,0 +1,19 @@
+branch-defaults:
+  main:
+    environment: portfolio-environment
+environment-defaults:
+  portfolio-environment:
+    branch: null
+    repository: null
+global:
+  application_name: portfolio
+  default_ec2_keyname: Ec2-kp
+  default_platform: Node.js 22 running on 64bit Amazon Linux 2023
+  default_region: us-west-2
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  sc: git
+  workspace_type: Application
