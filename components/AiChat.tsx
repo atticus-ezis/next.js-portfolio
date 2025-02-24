@@ -12,7 +12,7 @@ export const AiChat = () => {
     if (!message) return;
     setLoading(true);
     try {
-      const res = await fetch('aiChat/api/hello', {
+      const res = await fetch('/api/aiChat/hello', {
         method: 'POST',
         headers: { 'Content-type': 'applicaiton/json' },
         body: JSON.stringify({ message }),
