@@ -45,7 +45,12 @@ const projects = [
 ];
 
 // API Call - pass message from AiChat.tsx as req to GPT and return Response
-
+export async function GET() {
+  return new Response(JSON.stringify({ message: 'API is running!' }), {
+    status: 200,
+    headers: { 'Content-Type': 'application/json' },
+  });
+}
 export async function POST(req: Request) {
   const apiKey = (process.env.OPENAI_API_KEY || '').trim();
 
