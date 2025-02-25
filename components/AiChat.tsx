@@ -71,7 +71,7 @@ export const AiChat = () => {
 
       <div id="message-block" className="flex w-full flex-1 flex-col items-center">
         <textarea
-          className="w-full rounded-lg bg-[#21212150] p-4 text-white"
+          className="w-[80%] rounded-lg bg-[#21212150] p-4 text-white md:w-full"
           value={message}
           placeholder="Ask me about my background..."
           onChange={(e) => setMessage(e.target.value)}
@@ -83,9 +83,9 @@ export const AiChat = () => {
           }}
         ></textarea>
         {mounted && isMobile && (
-          <div className="absolute right-0 mt-4 flex flex-row">
+          <div className="absolute right-5 mt-4">
             <button onClick={sendMessage} className="rounded-full bg-blue-500 px-4 py-2">
-              <img src="/send.png" alt="" className="h-[40px] w-[40px] object-cover" />
+              <img src="/send.png" alt="" className="h-[35px] w-[20px] object-contain" />
             </button>
           </div>
         )}
