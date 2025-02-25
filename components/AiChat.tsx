@@ -51,10 +51,10 @@ export const AiChat = () => {
           <div id="chat-history" className="flex w-full flex-col-reverse overflow-y-auto">
             {history.map((entry, index) => (
               <div key={index} className="flex flex-col">
-                <div id="message" className="m-2 max-w-80 self-end rounded-lg bg-blue-500 p-2">
+                <div id="message" className="m-2 max-w-80 self-end rounded-lg bg-blue-500 p-2 text-white">
                   {entry.question}
                 </div>
-                <div id="response" className="m-2 max-w-80 self-start rounded-lg bg-green-700 p-2">
+                <div id="response" className="m-2 max-w-80 self-start rounded-lg bg-green-700 p-2 text-white">
                   {entry.answer}
                 </div>
               </div>
@@ -84,7 +84,7 @@ export const AiChat = () => {
             }}
           ></textarea>
           {mounted && isMobile && (
-            <div className="absolute bottom-2 right-0">
+            <div className="absolute bottom-2 right-1">
               <button onClick={sendMessage} className="rounded-full bg-blue-500 px-4 py-2">
                 <img src="/send.png" alt="" className="h-[35px] w-[20px] object-contain" />
               </button>

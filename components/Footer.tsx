@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export const Footer = () => {
   return (
-    <footer className="fixed bottom-0 z-10 flex w-full flex-wrap items-center justify-center gap-6 bg-[#0a0a0a] p-4 text-white">
+    <footer className="fixed bottom-0 z-10 flex w-full flex-wrap items-center justify-center gap-6 bg-[#0a0a0a] p-4">
       <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        className="text-green flex items-center gap-2 text-white hover:underline hover:underline-offset-4"
         href="https://github.com/atticus-ezis"
         target="_blank"
         rel="noopener noreferrer"
@@ -14,7 +14,7 @@ export const Footer = () => {
         GitHub
       </a>
       <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        className="flex items-center gap-2 text-white hover:underline hover:underline-offset-4"
         href="https://www.linkedin.com/in/atticusezis/"
         target="_blank"
         rel="noopener noreferrer"
@@ -23,7 +23,7 @@ export const Footer = () => {
         Linkedin
       </a>
       <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+        className="flex items-center gap-2 text-white hover:underline hover:underline-offset-4"
         href="mailto:atticus.ezis@gmail.com"
         target="_blank"
         rel="noopener noreferrer"
