@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { isMobile } from 'react-device-detect';
 
 export const AiChat = () => {
   const [message, setMessage] = useState('');
@@ -65,6 +66,7 @@ export const AiChat = () => {
       )}
 
       {/* message - bottom half */}
+
       <div id="message-block" className="flex w-full flex-1 flex-col items-center">
         <textarea
           className="w-full rounded-lg bg-[#21212150] p-4 text-white"
@@ -72,12 +74,19 @@ export const AiChat = () => {
           placeholder="Ask me about my background..."
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === 'Enter' && !e.shiftKey) {
+            if (!isMobile && e.key === 'Enter' && !e.shiftKey) {
               e.preventDefault();
               sendMessage();
             }
           }}
         ></textarea>
+        {isMobile && (
+          <div className="absolute right-0 mt-5 flex flex-row">
+            <button onClick={sendMessage} className="rounded bg-blue-500 px-4 py-2">
+              send
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
