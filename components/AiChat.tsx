@@ -8,6 +8,8 @@ export const AiChat = () => {
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
   const [history, setHistory] = useState<{ question: string; answer: string }[]>([]);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   const sendMessage = async () => {
     if (!message) return;
@@ -80,10 +82,10 @@ export const AiChat = () => {
             }
           }}
         ></textarea>
-        {isMobile && (
-          <div className="absolute right-0 mt-5 flex flex-row">
-            <button onClick={sendMessage} className="rounded bg-blue-500 px-4 py-2">
-              send
+        {mounted && isMobile && (
+          <div className="absolute right-0 mt-4 flex flex-row">
+            <button onClick={sendMessage} className="rounded-full bg-blue-500 px-4 py-2">
+              <img src="/send.png" alt="" className="h-[40px] w-[40px] object-cover" />
             </button>
           </div>
         )}
