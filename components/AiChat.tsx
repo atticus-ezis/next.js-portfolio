@@ -70,25 +70,27 @@ export const AiChat = () => {
       {/* message - bottom half */}
 
       <div id="message-block" className="flex w-full flex-1 flex-col items-center">
-        <textarea
-          className="w-[80%] rounded-lg bg-[#21212150] p-4 text-white md:w-full"
-          value={message}
-          placeholder="Ask me about my background..."
-          onChange={(e) => setMessage(e.target.value)}
-          onKeyDown={(e) => {
-            if (!isMobile && e.key === 'Enter' && !e.shiftKey) {
-              e.preventDefault();
-              sendMessage();
-            }
-          }}
-        ></textarea>
-        {mounted && isMobile && (
-          <div className="absolute right-5 mt-4">
-            <button onClick={sendMessage} className="rounded-full bg-blue-500 px-4 py-2">
-              <img src="/send.png" alt="" className="h-[35px] w-[20px] object-contain" />
-            </button>
-          </div>
-        )}
+        <div className="relative w-full">
+          <textarea
+            className="relative w-full rounded-lg bg-[#21212150] p-5 pr-16 text-white md:pr-0"
+            value={message}
+            placeholder="Ask me about my background..."
+            onChange={(e) => setMessage(e.target.value)}
+            onKeyDown={(e) => {
+              if (!isMobile && e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+              }
+            }}
+          ></textarea>
+          {mounted && isMobile && (
+            <div className="absolute bottom-2 right-0">
+              <button onClick={sendMessage} className="rounded-full bg-blue-500 px-4 py-2">
+                <img src="/send.png" alt="" className="h-[35px] w-[20px] object-contain" />
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
