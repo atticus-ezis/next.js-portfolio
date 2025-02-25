@@ -37,7 +37,7 @@ export const AiChat = () => {
     <div id="main-block" className="center container mx-auto h-screen w-3/4 md:w-1/2">
       {/* reponse - top half */}
       {!response && history.length === 0 ? (
-        <div id="response-block" className="flex h-[50%] w-full flex-col justify-end">
+        <div id="response-block" className="flex h-[50%] w-full flex-col justify-end pt-[12px]">
           {!loading ? (
             <div className="mb-8 text-center text-5xl">Nice to Meet you</div>
           ) : (
@@ -47,7 +47,7 @@ export const AiChat = () => {
           )}
         </div>
       ) : (
-        <div id="response-block" className="flex h-[75%] w-full flex-col justify-end">
+        <div id="response-block" className="flex h-[75%] w-full flex-col justify-end pt-[12px]">
           <div id="chat-history" className="flex w-full flex-col-reverse overflow-y-auto">
             {history.map((entry, index) => (
               <div key={index} className="flex flex-col">

@@ -44,10 +44,11 @@ export const Projects = () => {
   ];
 
   return (
-    <div className="relative top-12 flex h-[85vh] flex-col items-center justify-center">
+    <div className="top-12 flex flex-col items-center justify-center">
       <div className="p-10 text-center text-5xl font-bold">Projects</div>
-      <div className="no-scrollbar h-[80vh] w-full overflow-y-auto md:overflow-x-auto">
-        <div className="flex flex-col items-center justify-start gap-4 md:flex-row">
+      {/* Responsive Grid Layout */}
+      <div className="flex w-full justify-center px-6">
+        <div className="grid w-full max-w-6xl grid-cols-1 place-items-center gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {projects.map((project, index) => (
             <Card key={project.id + index} {...project} />
           ))}
