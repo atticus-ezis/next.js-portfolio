@@ -16,8 +16,7 @@ export const Projects = () => {
     {
       id: 1,
       title: 'Blogs4TheCriminallyInsane',
-      description:
-        'See what a blogsite run by the criminally insane would look like. Sign up, save posts, leave a comment, or even create a library of posts.',
+      description: 'Sign up, save posts, leave a comment, or even create a library of posts.',
       image: 'blogs4criminals.jpg',
       link: 'https://www.blogsforthecriminallyinsane.com/',
       github: 'https://github.com/atticus-ezis/test_blog.git',
@@ -44,10 +43,10 @@ export const Projects = () => {
   ];
 
   return (
-    <div className="relative top-12 flex h-[85vh] flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center py-[55px]">
       <div className="p-10 text-center text-5xl font-bold">Projects</div>
-      <div className="no-scrollbar h-[80vh] w-full overflow-y-auto md:overflow-x-auto">
-        <div className="flex flex-col items-center justify-start gap-4 md:flex-row">
+      <div className="flex w-full justify-center px-6">
+        <div className="grid w-full max-w-6xl grid-cols-1 place-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, index) => (
             <Card key={project.id + index} {...project} />
           ))}
