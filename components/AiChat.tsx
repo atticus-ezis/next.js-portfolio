@@ -72,7 +72,7 @@ export const AiChat = () => {
       <div id="message-block" className="flex w-full flex-1 flex-col items-center">
         <div className="relative w-full">
           <textarea
-            className="relative w-full rounded-lg p-5 pr-16 text-black shadow-xl md:pr-0"
+            className="relative w-full rounded-lg p-5 pr-16 text-black shadow-xl md:pr-0 dark:bg-red-50"
             value={message}
             placeholder="Ask me about my background..."
             onChange={(e) => setMessage(e.target.value)}

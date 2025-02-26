@@ -11,7 +11,7 @@ export const Hero = () => {
       <div className="text-5xl">Hello, I&apos;m Atticus</div>
       <div className="flex gap-4">
         <Link
-          className="flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent bg-foreground px-4 text-sm text-background transition-colors hover:bg-[#383838] sm:h-12 sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
+          className="flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent bg-foreground px-4 text-sm text-background transition-colors hover:bg-[#383838] sm:h-12 sm:px-5 sm:text-base"
           href="#ai"
           rel="noopener noreferrer"
           onClick={(e) => {
