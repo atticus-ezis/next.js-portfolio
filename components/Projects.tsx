@@ -44,7 +44,7 @@ export const Projects = () => {
 
   return (
     <div className="flex flex-col items-center justify-center py-[55px]">
-      <div className="p-10 text-center text-5xl font-bold">Projects</div>
+      <div className="py-5 text-center text-5xl font-bold">Projects</div>
       <div className="flex w-full justify-center px-6">
         <div className="grid w-full max-w-6xl grid-cols-1 place-items-center gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, index) => (

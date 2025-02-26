@@ -22,7 +22,7 @@ function Card({ image, title, description, link, github, skill }) {
       {/* skill section */}
       <div className="-blue-700 mx-auto mt-4 flex w-full flex-grow items-center justify-between rounded-lg bg-blue-700 p-3 px-4 text-center text-sm font-medium text-gray-200">
         <div className="">
-          <div className="text-xl md:text-sm">{skill}</div>
+          <div className="text-xl md:text-lg lg:text-sm">{skill}</div>
         </div>
         <div className="flex-shrink-0 transition-transform hover:scale-105 hover:cursor-pointer">
           <a href={`${github}`}>

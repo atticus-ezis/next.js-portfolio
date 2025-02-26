@@ -5,7 +5,7 @@ export const Experience = () => {
     <div className="flex h-screen flex-col items-center justify-center">
       <div className="text-center text-5xl font-bold">Experience</div>
 
-      <div className="mt-12 h-fit rounded-lg border bg-white p-6 shadow-lg">
+      <div className="mx-6 mt-12 h-fit rounded-lg border bg-white p-6 shadow-lg">
         {/* Job Title */}
         <h2 className="text-2xl font-bold text-gray-800">Junior Developer for AmericanLiterature.com</h2>
         <h3 className="text-gray-500">(July 2024 - Present)</h3>
