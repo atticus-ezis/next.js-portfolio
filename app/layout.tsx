@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://atticusezis.com'),
   title: "Atticus's Portfolio",
   description: 'Full-stack portfolio with AI chatbot',
   openGraph: {
@@ -21,9 +22,9 @@ export const metadata: Metadata = {
     description: 'Full-stack portfolio with AI chatbot',
     images: [
       {
-        url: '/og-image.png',
-        width: 512,
-        height: 512,
+        url: 'https://atticusezis.com/og-image.png',
+        width: 1200,
+        height: 630,
         alt: "Atticus's portfolio preview",
       },
     ],
