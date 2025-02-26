@@ -11,7 +11,7 @@ export const Hero = () => {
       <div className="text-5xl">Hello, I&apos;m Atticus</div>
       <div className="flex gap-4">
         <Link
-          className="flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent bg-foreground px-4 text-sm text-background transition-colors hover:bg-[#383838] sm:h-12 sm:px-5 sm:text-base"
+          className="flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent bg-foreground px-4 text-sm text-background transition-colors hover:bg-[#383838] sm:h-12 sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
           href="#ai"
           rel="noopener noreferrer"
           onClick={(e) => {
@@ -25,7 +25,7 @@ export const Hero = () => {
         </Link>
 
         <Link
-          className="flex h-10 items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:px-5 sm:text-base dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
+          className="flex h-10 items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:px-5 sm:text-base dark:hover:bg-[#1a1a1a]"
           href="#about"
           rel="noopener noreferrer"
           onClick={(e) => {

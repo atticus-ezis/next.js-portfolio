@@ -2,10 +2,10 @@ import React from 'react';
 
 export const About = () => {
   return (
-    <div className="md:px-30 flex flex-col items-center px-10 py-[55px]">
+    <div className="flex flex-col items-center px-10 py-[55px]">
       <div className="no-scrollbar h-fit rounded-lg">
         <h1 className="p-4 text-center text-5xl font-bold">About</h1>
-        <div className="flex flex-col gap-8 md:flex-row">
+        <div className="flex flex-col justify-center gap-8 md:flex-row">
           {/* Left Content Section */}
           <div className="flex flex-col justify-center gap-4 md:w-2/3">
             {/* Right Profile Section */}
