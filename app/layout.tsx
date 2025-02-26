@@ -16,6 +16,22 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Atticus's Portfolio",
   description: 'Full-stack portfolio with AI chatbot',
+  openGraph: {
+    title: "Atticus's Portfolio",
+    description: 'Full-stack portfolio with AI chatbot',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 512,
+        height: 512,
+        alt: "Atticus's portfolio preview",
+      },
+    ],
+  },
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export default function RootLayout({
