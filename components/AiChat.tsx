@@ -35,17 +35,15 @@ export const AiChat = () => {
     <div id="main-block" className="center container mx-auto h-screen w-3/4 md:w-1/2">
       {/* reponse - top half */}
       {!response && history.length === 0 ? (
-        <div id="response-block" className="flex h-[50%] w-full flex-col justify-end">
+        <div id="landing" className="flex h-[50%] w-full flex-col justify-end">
           {!loading ? (
             <div className="mb-8 text-center text-5xl">Nice to Meet you</div>
           ) : (
-            <div id="loading" className="flex text-lg">
-              Thinking...
-            </div>
+            <div className="flex text-lg">Thinking...</div>
           )}
         </div>
       ) : (
-        <div id="response-block" className="flex h-[75%] w-full flex-col justify-end">
+        <div id="conversation" className="flex h-[75%] w-full flex-col justify-end">
           <div id="chat-history" className="flex w-full flex-col-reverse overflow-y-auto">
             {history.map((entry, index) => (
               <div key={index} className="flex flex-col">
@@ -59,9 +57,7 @@ export const AiChat = () => {
             ))}
           </div>
 
-          <div id="loading" className="min-h-[30px] self-start">
-            {loading ? 'Thinking...' : ''}
-          </div>
+          <div className="min-h-[30px] self-start">{loading ? 'Thinking...' : ''}</div>
         </div>
       )}
 
@@ -83,7 +79,7 @@ export const AiChat = () => {
           ></textarea>
           <div className="absolute bottom-3 right-2">
             <button onClick={sendMessage} className="rounded-full bg-blue-500 px-2">
-              <img src="/send.png" alt="" className="h-[35px] w-[20px] object-contain" />
+              <img src="/send.png" alt="send message" className="h-[35px] w-[20px] object-contain" />
             </button>
           </div>
         </div>
