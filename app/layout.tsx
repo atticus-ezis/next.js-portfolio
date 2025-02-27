@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: 'Full-stack portfolio with AI chatbot',
     images: [
       {
-        url: 'https://atticusezis.com/og-image.png',
+        url: 'https://atticusezis.com/og-image2.png',
         width: 1200,
         height: 630,
         alt: "Atticus's portfolio preview",
