@@ -60,9 +60,7 @@ export const AiChat = () => {
           <div className="min-h-[30px] self-start">{loading ? 'Thinking...' : ''}</div>
         </div>
       )}
-
       {/* message - bottom half */}
-
       <div id="message-block" className="flex w-full flex-1 flex-col items-center">
         <div className="relative w-full">
           <textarea
