@@ -8,8 +8,6 @@ export const AiChat = () => {
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
   const [history, setHistory] = useState<{ question: string; answer: string }[]>([]);
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
 
   const sendMessage = async () => {
     if (!message) return;
@@ -17,7 +15,7 @@ export const AiChat = () => {
     try {
       const res = await fetch('/api/aiChat', {
         method: 'POST',
-        headers: { 'Content-type': 'applicaiton/json' },
+        headers: { 'Content-type': 'application/json' },
         body: JSON.stringify({ message }),
       });
       const data = await res.json();
