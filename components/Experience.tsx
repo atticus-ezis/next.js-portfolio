@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Experience = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-center">
+    <div className="flex h-screen flex-col items-center justify-start pt-[55px]">
       <div className="text-center text-5xl font-bold">Experience</div>
 
       <div className="mx-6 mt-12 h-fit rounded-lg border bg-white p-6 shadow-lg">
@@ -15,17 +15,31 @@ export const Experience = () => {
           <h3 className="font-bold text-black">Duties:</h3>
           <ul className="list-inside list-disc font-semibold">
             <li>Improved UX with new library design.</li>
-            <li>Maintained codebase, updated and managed content, created error pages.</li>
+            <li>Maintain codebase, update and manage content, create error pages.</li>
           </ul>
 
           <h3 className="mt-4 font-bold text-black">Skills:</h3>
           <ul className="list-inside list-disc">
             <li>
-              Queried the site&apos;s PostgreSQL database to gather story information such as rating, image, and
-              preface.
+              Query a PostgreSQL database and manage models such as stories and authors, along with attributes like
+              rating and images, on the server-side.
             </li>
-            <li>Rendered information client-side dynamically with JavaScript.</li>
+            <li>
+              Dynamically render content on the client-side using JavaScript, while leveraging Django, a Python-based
+              server-side framework, for backend processing.{' '}
+            </li>
           </ul>
+        </div>
+      </div>
+      {/* Before + After */}
+      <div className="flex gap-2 p-5">
+        <div>
+          <div className="text-2xl font-bold">Before</div>
+          <img src="/before.png" alt="before.png" className="min-w-2 rounded-lg object-cover" />
+        </div>
+        <div>
+          <div className="text-2xl font-bold">After</div>
+          <img src="/after.png" alt="after.png" className="min-w-2 rounded-lg object-cover" />
         </div>
       </div>
     </div>

@@ -62,15 +62,13 @@ export const About = () => {
 
             {/* LMM Development Section */}
             <div className="mb-4 rounded-lg bg-white p-6 shadow-md">
-              <h2 className="mb-2 text-2xl font-semibold text-gray-400">Shopify Development</h2>
+              <h2 className="mb-2 text-2xl font-semibold text-gray-400">LMM Development</h2>
               <p className="text-gray-700">
-                Completed Shopify Academy&apos;s Development Fundamentals. A four-part series where I created a
-                development store and customized the main theme using the Admin console, Theme Editor, and Web Editor
-                with Liquid. I created metafields and metaobjects for products, new collection templates and linked
-                GraphiQL to the store to query and mutate object data.
+                I develop RAG applications using Large Language Models, including the AI on this site. Currently,
+                I&apos;m studying TensorFlow to enhance my predictave ability.
               </p>
               <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
-                <img src="/shopify2.png" className="h-12" alt="TensorFlow" />
+                <img src="/tensor.png" className="h-8" alt="TensorFlow" />
               </div>
             </div>
           </div>
