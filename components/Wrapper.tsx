@@ -7,7 +7,7 @@ interface SectionWrapperProps {
 
 export const Wrapper = ({ id, children }: SectionWrapperProps) => {
   return (
-    <section className="min-h-screen overflow-y-auto container mx-auto snap-start relative" id={id}>
+    <section className="container relative mx-auto min-h-screen snap-start overflow-y-auto" id={id}>
       {children}
     </section>
   );

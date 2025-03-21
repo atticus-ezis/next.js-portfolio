@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Experience = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-start pt-[55px]">
+    <div className="mb-[55px] flex h-screen flex-col items-center justify-start pt-[55px]">
       <div className="text-center text-5xl font-bold">Experience</div>
 
       <div className="mx-6 mt-12 h-fit rounded-lg border bg-white p-6 shadow-lg">
@@ -32,7 +32,7 @@ export const Experience = () => {
         </div>
       </div>
       {/* Before + After */}
-      <div className="flex gap-2 p-5">
+      <div className="gap-2 p-5 md:flex">
         <div>
           <div className="text-2xl font-bold">Before</div>
           <img src="/before.png" alt="before.png" className="min-w-2 rounded-lg object-cover" />

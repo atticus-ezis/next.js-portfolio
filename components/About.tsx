@@ -2,20 +2,23 @@ import React from 'react';
 
 export const About = () => {
   return (
-    <div className="flex flex-col items-center px-10 py-[55px]">
-      <div className="no-scrollbar h-fit rounded-lg">
-        <h1 className="p-4 text-center text-5xl font-bold">About</h1>
-        <div className="flex flex-col justify-center gap-8 md:flex-row">
-          {/* Left Content Section */}
-          <div className="flex flex-col justify-center gap-4 md:w-2/3">
-            {/* Right Profile Section */}
-            <div className="order-first flex flex-col items-center md:order-none">
-              <img
-                className="mt-5 h-64 w-64 rounded-full object-cover shadow-md md:h-80 md:w-80"
-                src="/profile.jpeg"
-                alt="Profile"
-              />
-            </div>
+    <div className="mt-4 flex h-screen flex-col items-center px-4 py-10 sm:px-6 md:px-10 md:py-[55px]">
+      <div className="w-full max-w-7xl rounded-lg">
+        <h1 className="mb-10 text-center text-4xl font-bold sm:text-5xl">About</h1>
+
+        {/* Main Content Row (stacks on mobile, row on md+) */}
+        <div className="flex flex-col items-center justify-center gap-8 md:w-full">
+          {/* Profile Section */}
+          <div className="flex justify-center md:w-1/3">
+            <img
+              className="h-48 w-48 rounded-full object-cover shadow-md sm:h-64 sm:w-64"
+              src="/profile.jpeg"
+              alt="Profile"
+            />
+          </div>
+
+          {/* Content Section */}
+          <div className="flex max-h-[50vh] flex-col gap-6 overflow-y-auto overscroll-contain md:w-2/3">
             {/* Web Design Section */}
             <div className="rounded-lg bg-white p-6 shadow-md">
               <h2 className="mb-2 text-2xl font-semibold text-gray-400">
@@ -27,12 +30,10 @@ export const About = () => {
                 <a href="https://americanliterature.com/" className="text-blue-500 hover:underline">
                   AmericanLiterature.com
                 </a>
-                , a platform with over 400,000 visitors per month. I&apos;m also familiar with other
-                Model-View-Controller frameworks like Ruby and Next.js. As well as front end tools like React, Tailwind
-                and Bootstrap.
+                , a platform with over 400,000 visitors per month. I&apos;m also familiar with other MVC frameworks like
+                Ruby and Next.js, and front-end tools like React, Tailwind and Bootstrap.
               </p>
-
-              <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
+              <div className="mt-4 flex flex-wrap items-center gap-4">
                 <img src="/django.svg" className="h-12" alt="Django" />
                 <img src="/postgre.svg" className="h-12" alt="PostgreSQL" />
                 <img src="/react.svg" className="h-12" alt="React" />
@@ -51,8 +52,7 @@ export const About = () => {
                 I&apos;ve applied linear regressions and standard deviations in Python to predict crypto pricing,
                 increasing my investment return by 24%.
               </p>
-
-              <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
+              <div className="mt-4 flex flex-wrap items-center gap-4">
                 <img src="/SQL.svg" className="h-12" alt="SQL" />
                 <img src="/python.jpeg" className="h-12" alt="Python" />
                 <img src="/pandas.png" className="h-12" alt="Pandas" />
@@ -61,13 +61,13 @@ export const About = () => {
             </div>
 
             {/* LMM Development Section */}
-            <div className="mb-4 rounded-lg bg-white p-6 shadow-md">
+            <div className="mb-12 rounded-lg bg-white p-6 shadow-md">
               <h2 className="mb-2 text-2xl font-semibold text-gray-400">LMM Development</h2>
               <p className="text-gray-700">
                 I develop RAG applications using Large Language Models, including the AI on this site. Currently,
-                I&apos;m studying TensorFlow to enhance my predictave ability.
+                I&apos;m studying TensorFlow to enhance my predictive ability.
               </p>
-              <div className="mt-4 flex flex-wrap items-center justify-start gap-4">
+              <div className="mt-4 flex flex-wrap items-center gap-4">
                 <img src="/tensor.png" className="h-8" alt="TensorFlow" />
               </div>
             </div>
