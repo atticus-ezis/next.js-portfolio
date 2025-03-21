@@ -2,11 +2,17 @@ import React from 'react';
 
 export const About = () => {
   return (
-    <div className="mt-4 flex h-screen flex-col items-center px-4 py-10 sm:px-6 md:px-10 md:py-[55px]">
-      <div className="w-full max-w-7xl rounded-lg">
+    <div className="relative mt-[55px] flex h-[calc(100vh-110px)] w-full justify-center px-4 pb-[55px] sm:px-6 md:px-10">
+      <div className="absolute left-0 top-0 z-10 h-full w-1/4" />
+      <div className="absolute right-0 top-0 z-10 h-full w-1/4" />
+      <div className="absolute left-0 top-0 z-10 h-14 w-full" />
+      <div className="absolute bottom-0 left-0 z-10 h-[100px] w-full" />
+
+      {/* Scrollable content */}
+      <div className="w-full max-w-7xl flex-1 touch-pan-y overflow-y-auto overscroll-contain rounded-lg pr-2">
         <h1 className="mb-10 text-center text-4xl font-bold sm:text-5xl">About</h1>
 
-        {/* Main Content Row (stacks on mobile, row on md+) */}
+        {/* Main Content Row */}
         <div className="flex flex-col items-center justify-center gap-8 md:w-full">
           {/* Profile Section */}
           <div className="flex justify-center md:w-1/3">
@@ -18,7 +24,7 @@ export const About = () => {
           </div>
 
           {/* Content Section */}
-          <div className="flex max-h-[50vh] flex-col gap-6 overflow-y-auto overscroll-contain md:w-2/3">
+          <div className="flex flex-col gap-6 md:w-2/3">
             {/* Web Design Section */}
             <div className="rounded-lg bg-white p-6 shadow-md">
               <h2 className="mb-2 text-2xl font-semibold text-gray-400">
