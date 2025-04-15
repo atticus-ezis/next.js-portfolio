@@ -44,8 +44,6 @@ export const Projects = () => {
 
   return (
     <div className="relative flex flex-col items-center justify-center py-[55px]">
-      <div className="absolute left-0 top-0 z-10 h-full w-1/4" />
-      <div className="absolute right-0 top-0 z-10 h-full w-1/4" />
       <div className="absolute left-0 top-0 z-10 h-14 w-full" />
       <div className="absolute bottom-0 left-0 z-10 h-[100px] w-full" />
       <div className="py-5 text-center text-5xl font-bold">Projects</div>
