@@ -5,7 +5,7 @@ const background = [
     I'm certified in HTML, CSS, JavaScript, SQL and Python. I've created apps with React.js, Ruby on Rails, and Django and PostgreSQL. I have the most time with Django. I use vstudio and github and am competent with branch managment and collaborating on repositories including a production site: Americanliterature.com.-\
     I graduated from University of Colorado Boulder (2016 - 2020). GPA: 3.3. Majored in Business Administration and Entrepreneurship. Important Classes: Calculus 1 & 2, Python and Data Science, Digital Marketing, Data Science. Finance-\
     Achievements: Chosen to lead a team for my class's capstone project, conducted market research and created a business plan. Got Alteryx core certified in my Data Science class.-\
-    Personal details: I'm 26. My favorite food is cheeseburgers, my favorite color is black. I make music for fun and I study jazz piano.",
+    Personal details: I was born in 1998. My favorite food is cheeseburgers, my favorite color is green. I make music for fun and I study jazz piano.",
 ];
 
 const personality = [
@@ -14,6 +14,23 @@ const personality = [
 ];
 
 const experience = [
+  // Mugna Internship
+  'Backend Developer Internship at Mugna Inc in the Philippines: -\
+  Tech: Python, Django, Django REST Framework, Pytest, PostgreSQL, Celery, Redis, Docker, Git -\
+  June - August 2025 (full-time) -\
+  Worked as part of an Agile team to build accounting software for Rizal Memorial College: -\
+  Accounts Receivable Payments: Built the backend for Student Payments and Government Subsidies. This included -\
+  designing the Database Schema, API Endpoints and Business Logic. Resulted in a centralized payment processor used for -\
+  all AR payments, capable of matching Academic Terms, Installments, Departments, and Locations to multiple Bank -\
+  Accounts across different Payment Types and Methods. Creating faster development and simplified testing for all payments. -\
+  CSV Exports (Journal Entries): I built downloadable CSV files for Journal Entries. I did this by implementing an -\
+  asynchronous export service with Celery/Redis to handle large files; added reusable status/polling and retries to keep -\
+  requests non-blocking. The result was a reliable export flow adopted by 4 other models. -\
+  Fee Types / Fee Codes: Modeled schemas and APIs to create and track Fee Codes. Resulted in the creation of a soft-delete -\
+  and restore feature which was later adopted site-wide. -\
+  Stats: Authored 78 Pytest test cases. Created 10 of 63 total models. 16% of models in total. I created 6 out of the 15 models in -\
+  accounts recievable, which was 40% of models in this app',
+
   'Junior Developer for American Literature: (October 2024 to present). I maintain the codebase, assist with updates and am currently implementing a library redesings using Django, AWS and PostgresSQL.-\
     Relevant Skills: HTML, JavaScript, Bootstrap, Django ORM, PostgreSQL, Query Optimization, string manipulation & URL Construction, Logging and Debugging, Structured Data Transformation converts complex database models into frontend-ready JSON structures, full-stack backend development-\
     Achievment: Created a view that displays stories from PostgreSQL database with image, rating and description for a more readable user-freindly front-end',
